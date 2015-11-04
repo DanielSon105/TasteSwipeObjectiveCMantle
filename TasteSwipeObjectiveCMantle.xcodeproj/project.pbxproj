@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E01EA2761BEA8C06002119B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2751BEA8C06002119B7 /* main.m */; };
+		E01EA2791BEA8C06002119B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2781BEA8C06002119B7 /* AppDelegate.m */; };
+		E01EA27C1BEA8C06002119B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA27B1BEA8C06002119B7 /* ViewController.m */; };
+		E01EA27F1BEA8C06002119B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01EA27D1BEA8C06002119B7 /* Main.storyboard */; };
+		E01EA2821BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2801BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodeld */; };
+		E01EA2841BEA8C06002119B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E01EA2831BEA8C06002119B7 /* Assets.xcassets */; };
+		E01EA2871BEA8C06002119B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01EA2851BEA8C06002119B7 /* LaunchScreen.storyboard */; };
+		E01EA2921BEA8C06002119B7 /* TasteSwipeObjectiveCMantleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2911BEA8C06002119B7 /* TasteSwipeObjectiveCMantleTests.m */; };
+		E01EA29D1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA29C1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E01EA28E1BEA8C06002119B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E01EA2691BEA8C06002119B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E01EA2701BEA8C06002119B7;
+			remoteInfo = TasteSwipeObjectiveCMantle;
+		};
+		E01EA2991BEA8C06002119B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E01EA2691BEA8C06002119B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E01EA2701BEA8C06002119B7;
+			remoteInfo = TasteSwipeObjectiveCMantle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E01EA2711BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteSwipeObjectiveCMantle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E01EA2751BEA8C06002119B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E01EA2771BEA8C06002119B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E01EA2781BEA8C06002119B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E01EA27A1BEA8C06002119B7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E01EA27B1BEA8C06002119B7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E01EA27E1BEA8C06002119B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E01EA2811BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TasteSwipeObjectiveCMantle.xcdatamodel; sourceTree = "<group>"; };
+		E01EA2831BEA8C06002119B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E01EA2861BEA8C06002119B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E01EA2881BEA8C06002119B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E01EA28D1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteSwipeObjectiveCMantleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E01EA2911BEA8C06002119B7 /* TasteSwipeObjectiveCMantleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TasteSwipeObjectiveCMantleTests.m; sourceTree = "<group>"; };
+		E01EA2931BEA8C06002119B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E01EA2981BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteSwipeObjectiveCMantleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E01EA29C1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TasteSwipeObjectiveCMantleUITests.m; sourceTree = "<group>"; };
+		E01EA29E1BEA8C06002119B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E01EA26E1BEA8C06002119B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E01EA28A1BEA8C06002119B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E01EA2951BEA8C06002119B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E01EA2681BEA8C06002119B7 = {
+			isa = PBXGroup;
+			children = (
+				E01EA2731BEA8C06002119B7 /* TasteSwipeObjectiveCMantle */,
+				E01EA2901BEA8C06002119B7 /* TasteSwipeObjectiveCMantleTests */,
+				E01EA29B1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests */,
+				E01EA2721BEA8C06002119B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E01EA2721BEA8C06002119B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E01EA2711BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.app */,
+				E01EA28D1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleTests.xctest */,
+				E01EA2981BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E01EA2731BEA8C06002119B7 /* TasteSwipeObjectiveCMantle */ = {
+			isa = PBXGroup;
+			children = (
+				E01EA2771BEA8C06002119B7 /* AppDelegate.h */,
+				E01EA2781BEA8C06002119B7 /* AppDelegate.m */,
+				E01EA27A1BEA8C06002119B7 /* ViewController.h */,
+				E01EA27B1BEA8C06002119B7 /* ViewController.m */,
+				E01EA27D1BEA8C06002119B7 /* Main.storyboard */,
+				E01EA2831BEA8C06002119B7 /* Assets.xcassets */,
+				E01EA2851BEA8C06002119B7 /* LaunchScreen.storyboard */,
+				E01EA2881BEA8C06002119B7 /* Info.plist */,
+				E01EA2801BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodeld */,
+				E01EA2741BEA8C06002119B7 /* Supporting Files */,
+			);
+			path = TasteSwipeObjectiveCMantle;
+			sourceTree = "<group>";
+		};
+		E01EA2741BEA8C06002119B7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E01EA2751BEA8C06002119B7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E01EA2901BEA8C06002119B7 /* TasteSwipeObjectiveCMantleTests */ = {
+			isa = PBXGroup;
+			children = (
+				E01EA2911BEA8C06002119B7 /* TasteSwipeObjectiveCMantleTests.m */,
+				E01EA2931BEA8C06002119B7 /* Info.plist */,
+			);
+			path = TasteSwipeObjectiveCMantleTests;
+			sourceTree = "<group>";
+		};
+		E01EA29B1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E01EA29C1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests.m */,
+				E01EA29E1BEA8C06002119B7 /* Info.plist */,
+			);
+			path = TasteSwipeObjectiveCMantleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E01EA2701BEA8C06002119B7 /* TasteSwipeObjectiveCMantle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E01EA2A11BEA8C06002119B7 /* Build configuration list for PBXNativeTarget "TasteSwipeObjectiveCMantle" */;
+			buildPhases = (
+				E01EA26D1BEA8C06002119B7 /* Sources */,
+				E01EA26E1BEA8C06002119B7 /* Frameworks */,
+				E01EA26F1BEA8C06002119B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TasteSwipeObjectiveCMantle;
+			productName = TasteSwipeObjectiveCMantle;
+			productReference = E01EA2711BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E01EA28C1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E01EA2A41BEA8C06002119B7 /* Build configuration list for PBXNativeTarget "TasteSwipeObjectiveCMantleTests" */;
+			buildPhases = (
+				E01EA2891BEA8C06002119B7 /* Sources */,
+				E01EA28A1BEA8C06002119B7 /* Frameworks */,
+				E01EA28B1BEA8C06002119B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E01EA28F1BEA8C06002119B7 /* PBXTargetDependency */,
+			);
+			name = TasteSwipeObjectiveCMantleTests;
+			productName = TasteSwipeObjectiveCMantleTests;
+			productReference = E01EA28D1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E01EA2971BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E01EA2A71BEA8C06002119B7 /* Build configuration list for PBXNativeTarget "TasteSwipeObjectiveCMantleUITests" */;
+			buildPhases = (
+				E01EA2941BEA8C06002119B7 /* Sources */,
+				E01EA2951BEA8C06002119B7 /* Frameworks */,
+				E01EA2961BEA8C06002119B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E01EA29A1BEA8C06002119B7 /* PBXTargetDependency */,
+			);
+			name = TasteSwipeObjectiveCMantleUITests;
+			productName = TasteSwipeObjectiveCMantleUITests;
+			productReference = E01EA2981BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E01EA2691BEA8C06002119B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Daniel Barrido";
+				TargetAttributes = {
+					E01EA2701BEA8C06002119B7 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4BKZPEQX5J;
+					};
+					E01EA28C1BEA8C06002119B7 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4BKZPEQX5J;
+						TestTargetID = E01EA2701BEA8C06002119B7;
+					};
+					E01EA2971BEA8C06002119B7 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4BKZPEQX5J;
+						TestTargetID = E01EA2701BEA8C06002119B7;
+					};
+				};
+			};
+			buildConfigurationList = E01EA26C1BEA8C06002119B7 /* Build configuration list for PBXProject "TasteSwipeObjectiveCMantle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E01EA2681BEA8C06002119B7;
+			productRefGroup = E01EA2721BEA8C06002119B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E01EA2701BEA8C06002119B7 /* TasteSwipeObjectiveCMantle */,
+				E01EA28C1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleTests */,
+				E01EA2971BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E01EA26F1BEA8C06002119B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E01EA2871BEA8C06002119B7 /* LaunchScreen.storyboard in Resources */,
+				E01EA2841BEA8C06002119B7 /* Assets.xcassets in Resources */,
+				E01EA27F1BEA8C06002119B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E01EA28B1BEA8C06002119B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E01EA2961BEA8C06002119B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E01EA26D1BEA8C06002119B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E01EA27C1BEA8C06002119B7 /* ViewController.m in Sources */,
+				E01EA2791BEA8C06002119B7 /* AppDelegate.m in Sources */,
+				E01EA2761BEA8C06002119B7 /* main.m in Sources */,
+				E01EA2821BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E01EA2891BEA8C06002119B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E01EA2921BEA8C06002119B7 /* TasteSwipeObjectiveCMantleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E01EA2941BEA8C06002119B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E01EA29D1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E01EA28F1BEA8C06002119B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E01EA2701BEA8C06002119B7 /* TasteSwipeObjectiveCMantle */;
+			targetProxy = E01EA28E1BEA8C06002119B7 /* PBXContainerItemProxy */;
+		};
+		E01EA29A1BEA8C06002119B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E01EA2701BEA8C06002119B7 /* TasteSwipeObjectiveCMantle */;
+			targetProxy = E01EA2991BEA8C06002119B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E01EA27D1BEA8C06002119B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E01EA27E1BEA8C06002119B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E01EA2851BEA8C06002119B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E01EA2861BEA8C06002119B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E01EA29F1BEA8C06002119B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E01EA2A01BEA8C06002119B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E01EA2A21BEA8C06002119B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TasteSwipeObjectiveCMantle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = danielbarrido.TasteSwipeObjectiveCMantle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E01EA2A31BEA8C06002119B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TasteSwipeObjectiveCMantle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = danielbarrido.TasteSwipeObjectiveCMantle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E01EA2A51BEA8C06002119B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TasteSwipeObjectiveCMantleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = danielbarrido.TasteSwipeObjectiveCMantleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TasteSwipeObjectiveCMantle.app/TasteSwipeObjectiveCMantle";
+			};
+			name = Debug;
+		};
+		E01EA2A61BEA8C06002119B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TasteSwipeObjectiveCMantleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = danielbarrido.TasteSwipeObjectiveCMantleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TasteSwipeObjectiveCMantle.app/TasteSwipeObjectiveCMantle";
+			};
+			name = Release;
+		};
+		E01EA2A81BEA8C06002119B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TasteSwipeObjectiveCMantleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = danielbarrido.TasteSwipeObjectiveCMantleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TasteSwipeObjectiveCMantle;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		E01EA2A91BEA8C06002119B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TasteSwipeObjectiveCMantleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = danielbarrido.TasteSwipeObjectiveCMantleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TasteSwipeObjectiveCMantle;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E01EA26C1BEA8C06002119B7 /* Build configuration list for PBXProject "TasteSwipeObjectiveCMantle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E01EA29F1BEA8C06002119B7 /* Debug */,
+				E01EA2A01BEA8C06002119B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E01EA2A11BEA8C06002119B7 /* Build configuration list for PBXNativeTarget "TasteSwipeObjectiveCMantle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E01EA2A21BEA8C06002119B7 /* Debug */,
+				E01EA2A31BEA8C06002119B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E01EA2A41BEA8C06002119B7 /* Build configuration list for PBXNativeTarget "TasteSwipeObjectiveCMantleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E01EA2A51BEA8C06002119B7 /* Debug */,
+				E01EA2A61BEA8C06002119B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E01EA2A71BEA8C06002119B7 /* Build configuration list for PBXNativeTarget "TasteSwipeObjectiveCMantleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E01EA2A81BEA8C06002119B7 /* Debug */,
+				E01EA2A91BEA8C06002119B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E01EA2801BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E01EA2811BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodel */,
+			);
+			currentVersion = E01EA2811BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodel */;
+			path = TasteSwipeObjectiveCMantle.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E01EA2691BEA8C06002119B7 /* Project object */;
+}
