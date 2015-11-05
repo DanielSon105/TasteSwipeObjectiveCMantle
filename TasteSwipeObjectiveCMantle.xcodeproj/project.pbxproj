@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF2CB243DC7A990F7B1B0D1D /* libPods-TasteSwipeObjectiveCMantle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3290F604B43CC7B4E6495C4 /* libPods-TasteSwipeObjectiveCMantle.a */; };
 		E01EA2761BEA8C06002119B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2751BEA8C06002119B7 /* main.m */; };
 		E01EA2791BEA8C06002119B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2781BEA8C06002119B7 /* AppDelegate.m */; };
 		E01EA27C1BEA8C06002119B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA27B1BEA8C06002119B7 /* ViewController.m */; };
@@ -16,6 +17,17 @@
 		E01EA2871BEA8C06002119B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01EA2851BEA8C06002119B7 /* LaunchScreen.storyboard */; };
 		E01EA2921BEA8C06002119B7 /* TasteSwipeObjectiveCMantleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2911BEA8C06002119B7 /* TasteSwipeObjectiveCMantleTests.m */; };
 		E01EA29D1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA29C1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests.m */; };
+		E01EA2B21BEA9675002119B7 /* SwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2B11BEA9675002119B7 /* SwipeViewController.m */; };
+		E01EA2B51BEA96C1002119B7 /* SwipedCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2B41BEA96C1002119B7 /* SwipedCardView.m */; };
+		E01EA2B71BEA9717002119B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01EA2B61BEA9717002119B7 /* CoreGraphics.framework */; };
+		E01EA2B91BEA972D002119B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01EA2B81BEA972D002119B7 /* UIKit.framework */; };
+		E01EA2BC1BEA9AF2002119B7 /* SwipedCardBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2BB1BEA9AF2002119B7 /* SwipedCardBackgroundView.m */; };
+		E01EA2C21BEAA32B002119B7 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2C11BEAA32B002119B7 /* OverlayView.m */; };
+		E01EA2D51BEACE86002119B7 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2D41BEACE86002119B7 /* UserModel.m */; };
+		E01EA2D81BEACE98002119B7 /* MealModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2D71BEACE98002119B7 /* MealModel.m */; };
+		E01EA3231BEBBA2B002119B7 /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA3221BEBBA2B002119B7 /* Meal.m */; };
+		E01EA3261BEBBA39002119B7 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA3251BEBBA39002119B7 /* User.m */; };
+		E01EA3291BEBBA52002119B7 /* Consumable.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA3281BEBBA52002119B7 /* Consumable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		227139A006BF727ADF283809 /* Pods-TasteSwipeObjectiveCMantle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TasteSwipeObjectiveCMantle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TasteSwipeObjectiveCMantle/Pods-TasteSwipeObjectiveCMantle.debug.xcconfig"; sourceTree = "<group>"; };
+		A3290F604B43CC7B4E6495C4 /* libPods-TasteSwipeObjectiveCMantle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TasteSwipeObjectiveCMantle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01EA2711BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteSwipeObjectiveCMantle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01EA2751BEA8C06002119B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E01EA2771BEA8C06002119B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +67,27 @@
 		E01EA2981BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TasteSwipeObjectiveCMantleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01EA29C1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TasteSwipeObjectiveCMantleUITests.m; sourceTree = "<group>"; };
 		E01EA29E1BEA8C06002119B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E01EA2B01BEA9675002119B7 /* SwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeViewController.h; sourceTree = "<group>"; };
+		E01EA2B11BEA9675002119B7 /* SwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeViewController.m; sourceTree = "<group>"; };
+		E01EA2B31BEA96C1002119B7 /* SwipedCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipedCardView.h; sourceTree = "<group>"; };
+		E01EA2B41BEA96C1002119B7 /* SwipedCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipedCardView.m; sourceTree = "<group>"; };
+		E01EA2B61BEA9717002119B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E01EA2B81BEA972D002119B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E01EA2BA1BEA9AF2002119B7 /* SwipedCardBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipedCardBackgroundView.h; sourceTree = "<group>"; };
+		E01EA2BB1BEA9AF2002119B7 /* SwipedCardBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipedCardBackgroundView.m; sourceTree = "<group>"; };
+		E01EA2C01BEAA32B002119B7 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
+		E01EA2C11BEAA32B002119B7 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
+		E01EA2D31BEACE86002119B7 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		E01EA2D41BEACE86002119B7 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		E01EA2D61BEACE98002119B7 /* MealModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealModel.h; sourceTree = "<group>"; };
+		E01EA2D71BEACE98002119B7 /* MealModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealModel.m; sourceTree = "<group>"; };
+		E01EA3211BEBBA2B002119B7 /* Meal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
+		E01EA3221BEBBA2B002119B7 /* Meal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
+		E01EA3241BEBBA39002119B7 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E01EA3251BEBBA39002119B7 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E01EA3271BEBBA52002119B7 /* Consumable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Consumable.h; sourceTree = "<group>"; };
+		E01EA3281BEBBA52002119B7 /* Consumable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Consumable.m; sourceTree = "<group>"; };
+		EA664A421B80E6424FB40E97 /* Pods-TasteSwipeObjectiveCMantle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TasteSwipeObjectiveCMantle.release.xcconfig"; path = "Pods/Target Support Files/Pods-TasteSwipeObjectiveCMantle/Pods-TasteSwipeObjectiveCMantle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +95,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E01EA2B91BEA972D002119B7 /* UIKit.framework in Frameworks */,
+				E01EA2B71BEA9717002119B7 /* CoreGraphics.framework in Frameworks */,
+				DF2CB243DC7A990F7B1B0D1D /* libPods-TasteSwipeObjectiveCMantle.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FB17B474F244F52EBFAC281 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				227139A006BF727ADF283809 /* Pods-TasteSwipeObjectiveCMantle.debug.xcconfig */,
+				EA664A421B80E6424FB40E97 /* Pods-TasteSwipeObjectiveCMantle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E01EA2681BEA8C06002119B7 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +134,8 @@
 				E01EA2901BEA8C06002119B7 /* TasteSwipeObjectiveCMantleTests */,
 				E01EA29B1BEA8C06002119B7 /* TasteSwipeObjectiveCMantleUITests */,
 				E01EA2721BEA8C06002119B7 /* Products */,
+				4FB17B474F244F52EBFAC281 /* Pods */,
+				E37902DCB3869D920F2D01C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +157,15 @@
 				E01EA27A1BEA8C06002119B7 /* ViewController.h */,
 				E01EA27B1BEA8C06002119B7 /* ViewController.m */,
 				E01EA27D1BEA8C06002119B7 /* Main.storyboard */,
+				E01EA2B01BEA9675002119B7 /* SwipeViewController.h */,
+				E01EA2B11BEA9675002119B7 /* SwipeViewController.m */,
+				E01EA2C61BEAC803002119B7 /* CustomClasses */,
+				E01EA2BA1BEA9AF2002119B7 /* SwipedCardBackgroundView.h */,
+				E01EA2BB1BEA9AF2002119B7 /* SwipedCardBackgroundView.m */,
+				E01EA2B31BEA96C1002119B7 /* SwipedCardView.h */,
+				E01EA2B41BEA96C1002119B7 /* SwipedCardView.m */,
+				E01EA2C01BEAA32B002119B7 /* OverlayView.h */,
+				E01EA2C11BEAA32B002119B7 /* OverlayView.m */,
 				E01EA2831BEA8C06002119B7 /* Assets.xcassets */,
 				E01EA2851BEA8C06002119B7 /* LaunchScreen.storyboard */,
 				E01EA2881BEA8C06002119B7 /* Info.plist */,
@@ -143,6 +201,33 @@
 			path = TasteSwipeObjectiveCMantleUITests;
 			sourceTree = "<group>";
 		};
+		E01EA2C61BEAC803002119B7 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E01EA2D31BEACE86002119B7 /* UserModel.h */,
+				E01EA2D41BEACE86002119B7 /* UserModel.m */,
+				E01EA2D61BEACE98002119B7 /* MealModel.h */,
+				E01EA2D71BEACE98002119B7 /* MealModel.m */,
+				E01EA3211BEBBA2B002119B7 /* Meal.h */,
+				E01EA3221BEBBA2B002119B7 /* Meal.m */,
+				E01EA3241BEBBA39002119B7 /* User.h */,
+				E01EA3251BEBBA39002119B7 /* User.m */,
+				E01EA3271BEBBA52002119B7 /* Consumable.h */,
+				E01EA3281BEBBA52002119B7 /* Consumable.m */,
+			);
+			name = CustomClasses;
+			sourceTree = "<group>";
+		};
+		E37902DCB3869D920F2D01C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E01EA2B81BEA972D002119B7 /* UIKit.framework */,
+				E01EA2B61BEA9717002119B7 /* CoreGraphics.framework */,
+				A3290F604B43CC7B4E6495C4 /* libPods-TasteSwipeObjectiveCMantle.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E01EA2A11BEA8C06002119B7 /* Build configuration list for PBXNativeTarget "TasteSwipeObjectiveCMantle" */;
 			buildPhases = (
+				694509842D3B0207A1685F05 /* Check Pods Manifest.lock */,
 				E01EA26D1BEA8C06002119B7 /* Sources */,
 				E01EA26E1BEA8C06002119B7 /* Frameworks */,
 				E01EA26F1BEA8C06002119B7 /* Resources */,
+				FBFA83DC0E02ABDCCE9BDF37 /* Embed Pods Frameworks */,
+				0DAE30F3BAC9C78E8C21FC2F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,15 +359,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0DAE30F3BAC9C78E8C21FC2F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TasteSwipeObjectiveCMantle/Pods-TasteSwipeObjectiveCMantle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		694509842D3B0207A1685F05 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FBFA83DC0E02ABDCCE9BDF37 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TasteSwipeObjectiveCMantle/Pods-TasteSwipeObjectiveCMantle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E01EA26D1BEA8C06002119B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E01EA2B51BEA96C1002119B7 /* SwipedCardView.m in Sources */,
+				E01EA3231BEBBA2B002119B7 /* Meal.m in Sources */,
 				E01EA27C1BEA8C06002119B7 /* ViewController.m in Sources */,
 				E01EA2791BEA8C06002119B7 /* AppDelegate.m in Sources */,
+				E01EA2BC1BEA9AF2002119B7 /* SwipedCardBackgroundView.m in Sources */,
 				E01EA2761BEA8C06002119B7 /* main.m in Sources */,
+				E01EA2C21BEAA32B002119B7 /* OverlayView.m in Sources */,
+				E01EA2B21BEA9675002119B7 /* SwipeViewController.m in Sources */,
+				E01EA3261BEBBA39002119B7 /* User.m in Sources */,
 				E01EA2821BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodeld in Sources */,
+				E01EA2D81BEACE98002119B7 /* MealModel.m in Sources */,
+				E01EA3291BEBBA52002119B7 /* Consumable.m in Sources */,
+				E01EA2D51BEACE86002119B7 /* UserModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +561,7 @@
 		};
 		E01EA2A21BEA8C06002119B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 227139A006BF727ADF283809 /* Pods-TasteSwipeObjectiveCMantle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TasteSwipeObjectiveCMantle/Info.plist;
@@ -427,6 +573,7 @@
 		};
 		E01EA2A31BEA8C06002119B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA664A421B80E6424FB40E97 /* Pods-TasteSwipeObjectiveCMantle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TasteSwipeObjectiveCMantle/Info.plist;
@@ -503,6 +650,7 @@
 				E01EA2A31BEA8C06002119B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E01EA2A41BEA8C06002119B7 /* Build configuration list for PBXNativeTarget "TasteSwipeObjectiveCMantleTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +659,7 @@
 				E01EA2A61BEA8C06002119B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E01EA2A71BEA8C06002119B7 /* Build configuration list for PBXNativeTarget "TasteSwipeObjectiveCMantleUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +668,7 @@
 				E01EA2A91BEA8C06002119B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
