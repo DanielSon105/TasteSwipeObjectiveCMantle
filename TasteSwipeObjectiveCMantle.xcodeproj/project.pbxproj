@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B034EDB91BEBFD2600E8571D /* MealDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B034EDB81BEBFD2600E8571D /* MealDetailViewController.m */; };
+		B034EDBC1BEC01FE00E8571D /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B034EDBB1BEC01FE00E8571D /* RecipeViewController.m */; };
+		B034EDBF1BEC04F400E8571D /* GroceryShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B034EDBE1BEC04F400E8571D /* GroceryShoppingViewController.m */; };
 		DF2CB243DC7A990F7B1B0D1D /* libPods-TasteSwipeObjectiveCMantle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3290F604B43CC7B4E6495C4 /* libPods-TasteSwipeObjectiveCMantle.a */; };
 		E01EA2761BEA8C06002119B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2751BEA8C06002119B7 /* main.m */; };
 		E01EA2791BEA8C06002119B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2781BEA8C06002119B7 /* AppDelegate.m */; };
@@ -50,6 +53,12 @@
 /* Begin PBXFileReference section */
 		227139A006BF727ADF283809 /* Pods-TasteSwipeObjectiveCMantle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TasteSwipeObjectiveCMantle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TasteSwipeObjectiveCMantle/Pods-TasteSwipeObjectiveCMantle.debug.xcconfig"; sourceTree = "<group>"; };
 		A3290F604B43CC7B4E6495C4 /* libPods-TasteSwipeObjectiveCMantle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TasteSwipeObjectiveCMantle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B034EDB71BEBFD2600E8571D /* MealDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealDetailViewController.h; sourceTree = "<group>"; };
+		B034EDB81BEBFD2600E8571D /* MealDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealDetailViewController.m; sourceTree = "<group>"; };
+		B034EDBA1BEC01FE00E8571D /* RecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeViewController.h; sourceTree = "<group>"; };
+		B034EDBB1BEC01FE00E8571D /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
+		B034EDBD1BEC04F400E8571D /* GroceryShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryShoppingViewController.h; sourceTree = "<group>"; };
+		B034EDBE1BEC04F400E8571D /* GroceryShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryShoppingViewController.m; sourceTree = "<group>"; };
 		E01EA2711BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteSwipeObjectiveCMantle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01EA2751BEA8C06002119B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E01EA2771BEA8C06002119B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -154,16 +163,21 @@
 			children = (
 				E01EA2771BEA8C06002119B7 /* AppDelegate.h */,
 				E01EA2781BEA8C06002119B7 /* AppDelegate.m */,
+				E01EA27D1BEA8C06002119B7 /* Main.storyboard */,
 				E01EA27A1BEA8C06002119B7 /* ViewController.h */,
 				E01EA27B1BEA8C06002119B7 /* ViewController.m */,
-				E01EA27D1BEA8C06002119B7 /* Main.storyboard */,
 				E01EA2B01BEA9675002119B7 /* SwipeViewController.h */,
 				E01EA2B11BEA9675002119B7 /* SwipeViewController.m */,
-				E01EA2C61BEAC803002119B7 /* CustomClasses */,
 				E01EA2BA1BEA9AF2002119B7 /* SwipedCardBackgroundView.h */,
 				E01EA2BB1BEA9AF2002119B7 /* SwipedCardBackgroundView.m */,
 				E01EA2B31BEA96C1002119B7 /* SwipedCardView.h */,
 				E01EA2B41BEA96C1002119B7 /* SwipedCardView.m */,
+				B034EDB71BEBFD2600E8571D /* MealDetailViewController.h */,
+				B034EDB81BEBFD2600E8571D /* MealDetailViewController.m */,
+				B034EDBA1BEC01FE00E8571D /* RecipeViewController.h */,
+				B034EDBB1BEC01FE00E8571D /* RecipeViewController.m */,
+				B034EDBD1BEC04F400E8571D /* GroceryShoppingViewController.h */,
+				B034EDBE1BEC04F400E8571D /* GroceryShoppingViewController.m */,
 				E01EA2C01BEAA32B002119B7 /* OverlayView.h */,
 				E01EA2C11BEAA32B002119B7 /* OverlayView.m */,
 				E01EA2831BEA8C06002119B7 /* Assets.xcassets */,
@@ -171,6 +185,7 @@
 				E01EA2881BEA8C06002119B7 /* Info.plist */,
 				E01EA2801BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodeld */,
 				E01EA2741BEA8C06002119B7 /* Supporting Files */,
+				E01EA2C61BEAC803002119B7 /* CustomClasses */,
 			);
 			path = TasteSwipeObjectiveCMantle;
 			sourceTree = "<group>";
@@ -416,6 +431,7 @@
 				E01EA3231BEBBA2B002119B7 /* Meal.m in Sources */,
 				E01EA27C1BEA8C06002119B7 /* ViewController.m in Sources */,
 				E01EA2791BEA8C06002119B7 /* AppDelegate.m in Sources */,
+				B034EDB91BEBFD2600E8571D /* MealDetailViewController.m in Sources */,
 				E01EA2BC1BEA9AF2002119B7 /* SwipedCardBackgroundView.m in Sources */,
 				E01EA2761BEA8C06002119B7 /* main.m in Sources */,
 				E01EA2C21BEAA32B002119B7 /* OverlayView.m in Sources */,
@@ -423,8 +439,10 @@
 				E01EA3261BEBBA39002119B7 /* User.m in Sources */,
 				E01EA2821BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodeld in Sources */,
 				E01EA2D81BEACE98002119B7 /* MealModel.m in Sources */,
+				B034EDBF1BEC04F400E8571D /* GroceryShoppingViewController.m in Sources */,
 				E01EA3291BEBBA52002119B7 /* Consumable.m in Sources */,
 				E01EA2D51BEACE86002119B7 /* UserModel.m in Sources */,
+				B034EDBC1BEC01FE00E8571D /* RecipeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
