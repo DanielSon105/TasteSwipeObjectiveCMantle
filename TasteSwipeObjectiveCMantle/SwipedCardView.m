@@ -91,7 +91,7 @@
  }
  */
 
-//%%% called when you move your finger across the screen.
+//called when you move your finger across the screen.
 // called many times a second
 -(void)beingDragged:(UIPanGestureRecognizer *)gestureRecognizer
 {

@@ -101,10 +101,13 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgA-2c-Dv8">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                     <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="Add"/>
+                                                    <state key="normal" title="HasTried"/>
                                                     <variation key="widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="307" y="8" width="85" height="89.5"/>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="onHasTriedButtonTapped:" destination="h7o-YW-wFk" eventType="touchUpInside" id="nbG-3C-uxV"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQK-T0-Dbw">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -113,6 +116,9 @@
                                                     <variation key="widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="112" y="20" width="187" height="30"/>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="onMealNameButtonTapped:" destination="h7o-YW-wFk" eventType="touchUpInside" id="zum-of-aP1"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3g-uK-69k">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -121,6 +127,9 @@
                                                     <variation key="widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="112" y="58" width="31" height="30"/>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="onStarOneButtonTapped:" destination="h7o-YW-wFk" eventType="touchUpInside" id="oMJ-lN-7dV"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPa-Dm-Nmp">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -129,6 +138,9 @@
                                                     <variation key="widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="151" y="58" width="31" height="30"/>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="onStarTwoButtonTapped:" destination="h7o-YW-wFk" eventType="touchUpInside" id="Rlq-hp-rpK"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20C-pR-TdV">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -137,6 +149,9 @@
                                                     <variation key="widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="190" y="58" width="31" height="30"/>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="onStarThreeButtonTapped:" destination="h7o-YW-wFk" eventType="touchUpInside" id="faB-fL-Zo6"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0E-0q-huF">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -145,6 +160,9 @@
                                                     <variation key="widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="229" y="58" width="31" height="30"/>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="onStarFourButtonTapped:" destination="h7o-YW-wFk" eventType="touchUpInside" id="efU-fn-aZp"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Orl-jY-rNS">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -153,6 +171,9 @@
                                                     <variation key="widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="268" y="58" width="31" height="30"/>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="onStarFiveButtonTapped:" destination="h7o-YW-wFk" eventType="touchUpInside" id="tNk-Ls-ilk"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -244,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGQ-0l-3pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="348"/>
+            <point key="canvasLocation" x="1788" y="387"/>
         </scene>
         <!--Meal Detail View Controller-->
         <scene sceneID="NNd-83-S0T">
