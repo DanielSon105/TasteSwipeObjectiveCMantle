@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ToTryListTableViewCell.h"
 
 @interface ViewController ()
 
@@ -23,5 +24,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

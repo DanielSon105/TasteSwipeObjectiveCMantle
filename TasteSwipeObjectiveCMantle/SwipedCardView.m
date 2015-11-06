@@ -46,7 +46,7 @@
         mealPicture.backgroundColor = [UIColor redColor];
         mealPicture.layer.cornerRadius = 4;
         mealPicture.clipsToBounds = YES;
-//        [information addSubview:mealImage];
+        [information addSubview:mealPicture];
 
         information.text = @"no info given";
         [information setTextAlignment:NSTextAlignmentCenter];

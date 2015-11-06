@@ -106,10 +106,11 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 //                NSArray *array = [mutableArray copy];
 //                    NSLog(@"%@", meal.mealName);
             }
-            NSLog(@"%@", arrayOfMeals);
+            NSLog(@"Array of Meals %@", arrayOfMeals);
             exampleCardLabels = [arrayOfMeals copy];
             loadedCards = [[NSMutableArray alloc] init];
-            allCards = [[NSMutableArray alloc] init];
+//            allCards = [arrayOfMeals copy];
+            allCards = [[NSMutableArray alloc] init];  //Need an Array of Swiped Card Views With a Meal Property Not an Array of Meals
             cardsLoadedIndex = 0;
             [self loadCards];
         });
@@ -117,6 +118,44 @@ static const float CARD_WIDTH = 290; // width of the draggable card
     
     [task resume];
     
+}
+
+-(void)postMealToToTryArray:(id)identification{
+    // Create the request.
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:nil delegateQueue:nil];
+
+    NSString *base_url = @"http://tasteswipe-int.herokuapp.com/";
+    NSString *mealID = identification; //
+    NSString *path =@"/meal/";
+    NSString *after_id = @"/right";
+
+    NSString *base_postRequest = [NSString stringWithFormat:@"meal/%@/right", identification];
+
+
+//    NSURL *url =[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@%@",base_url,path,mealID,after_id]];
+
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",base_url,base_postRequest]];
+
+//    [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",base_url]];
+
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    //    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://tasteswipe-int.herokuapp.com/meal/2/right"]];
+
+
+    // Specify that it will be a POST request
+    request.HTTPMethod = @"POST";
+
+    // This is how we set header fields
+    [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Accept"];
+
+
+    NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+
+        //do stuff
+    }];
+    [postDataTask resume];
 }
 
 
@@ -174,6 +213,8 @@ static const float CARD_WIDTH = 290; // width of the draggable card
     swipedCardView.information.text = swipedMeal.mealName;
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: swipedMeal.mealImageURL]];
     swipedCardView.mealPicture.image = [UIImage imageWithData: imageData];
+
+    NSLog(swipedMeal.mealImageURL);
 
 //    swipedCardView.information.text = [exampleCardLabels objectAtIndex:index];
     swipedCardView.delegate = self;
@@ -239,6 +280,17 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 -(void)cardSwipedRight:(UIView *)card
 {
     NSLog(@"test");
+
+    //ADD THE MEAL FROM THE SWIPED CARD TO THE ARRAY METHOD HERE
+
+    //NEED A METHOD THAT INCREASES THE OBJECT AT INDEX BY ONE FOR EVERY SUBSEQUENT SWIPE ----OR----- probably better solution.... base the meal on the Swiped View
+
+    [self postMealToToTryArray:[[exampleCardLabels objectAtIndex:0] mealID]];
+
+    NSLog(@"loadedCard mealName is --> %@",[[exampleCardLabels objectAtIndex:0] mealName]);
+
+    //POST [exampleCardLabels objectAtIndex:0]
+
     //do whatever you want with the card that was swiped
     //    SwipedCardView *c = (SwipedCardView *)card;
 
