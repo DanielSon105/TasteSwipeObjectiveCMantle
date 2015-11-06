@@ -30,6 +30,7 @@
 
 @synthesize panGestureRecognizer;
 @synthesize information;
+@synthesize mealPicture;
 @synthesize overlayView;
 
 - (id)initWithFrame:(CGRect)frame
@@ -39,12 +40,24 @@
         [self setupView];
 
 #warning placeholder stuff, replace with card-specific information {
-        information = [[UILabel alloc]initWithFrame:CGRectMake(0, 50, self.frame.size.width, 100)];
+        information = [[UILabel alloc]initWithFrame:CGRectMake(self.frame.size.width * .05 , self.frame.size.width * .05, self.frame.size.width * .9, self.frame.size.width * .9)]; //originally (0, 50, self.frame.size.width, 100)];
+
+        mealPicture = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width *.05, self.frame.size.width * .05, self.frame.size.width * .9, self.frame.size.width * .9)];
+        mealPicture.backgroundColor = [UIColor redColor];
+        mealPicture.layer.cornerRadius = 4;
+        mealPicture.clipsToBounds = YES;
+//        [information addSubview:mealImage];
+
         information.text = @"no info given";
         [information setTextAlignment:NSTextAlignmentCenter];
-        information.textColor = [UIColor blackColor];
+        information.textColor = [UIColor whiteColor];
+//        information.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"steak 2"]];
+        information.backgroundColor = [UIColor colorWithPatternImage:mealPicture.image];
 
-        self.backgroundColor = [UIColor whiteColor];
+//        mealPicture = [[UILabel alloc]initWithFrame:CGRectMake(0, 50, self.frame.size.width, 100)];
+        
+
+        self.backgroundColor = [UIColor yellowColor];
 #warning placeholder stuff, replace with card-specific information }
 
 
@@ -159,6 +172,29 @@
     }
 }
 
+
+
+
+
+#pragma mark - add meal to Interested Array?
+-(void)rightClickAction
+{
+    CGPoint finishPoint = CGPointMake(600, self.center.y);
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         self.center = finishPoint;
+                         self.transform = CGAffineTransformMakeRotation(1);
+                     }completion:^(BOOL complete){
+                         [self removeFromSuperview];
+
+                     }];
+
+    //add meal to NotInterested Array? -OR- do not because of the delegate below?
+    [delegate cardSwipedRight:self];
+
+    NSLog(@"YES");
+}
+
 //%%% called when a swipe exceeds the ACTION_MARGIN to the right
 -(void)rightAction
 {
@@ -175,38 +211,7 @@
     NSLog(@"YES");
 }
 
-//%%% called when a swip exceeds the ACTION_MARGIN to the left
--(void)leftAction
-{
-    CGPoint finishPoint = CGPointMake(-500, 2*yFromCenter +self.originalPoint.y);
-    [UIView animateWithDuration:0.3
-                     animations:^{
-                         self.center = finishPoint;
-                     }completion:^(BOOL complete){
-                         [self removeFromSuperview];
-                     }];
-
-    [delegate cardSwipedLeft:self];
-
-    NSLog(@"NO");
-}
-
--(void)rightClickAction
-{
-    CGPoint finishPoint = CGPointMake(600, self.center.y);
-    [UIView animateWithDuration:0.3
-                     animations:^{
-                         self.center = finishPoint;
-                         self.transform = CGAffineTransformMakeRotation(1);
-                     }completion:^(BOOL complete){
-                         [self removeFromSuperview];
-                     }];
-
-    [delegate cardSwipedRight:self];
-
-    NSLog(@"YES");
-}
-
+#pragma mark - add meal to NotInterested Array?
 -(void)leftClickAction
 {
     CGPoint finishPoint = CGPointMake(-600, self.center.y);
@@ -214,6 +219,23 @@
                      animations:^{
                          self.center = finishPoint;
                          self.transform = CGAffineTransformMakeRotation(-1);
+                     }completion:^(BOOL complete){
+                         [self removeFromSuperview];
+                     }];
+
+    //add meal to NotInterested Array? -OR- do not because of the delegate below?
+    [delegate cardSwipedLeft:self];
+
+    NSLog(@"NO");
+}
+
+//%%% called when a swip exceeds the ACTION_MARGIN to the left
+-(void)leftAction
+{
+    CGPoint finishPoint = CGPointMake(-500, 2*yFromCenter +self.originalPoint.y);
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         self.center = finishPoint;
                      }completion:^(BOOL complete){
                          [self removeFromSuperview];
                      }];

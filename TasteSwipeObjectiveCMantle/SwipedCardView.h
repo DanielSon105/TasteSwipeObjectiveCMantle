@@ -25,9 +25,12 @@
 @property (nonatomic)CGPoint originalPoint;
 @property (nonatomic,strong)SwipedCardView* swipedCardView;
 @property (nonatomic,strong)UILabel* information; //%%% a placeholder for any card-specific information
+
+@property (nonatomic,strong)UIImageView *mealPicture; //this should probably replace the information placeholder above
+
 @property OverlayView *overlayView;
 
-@property Meal *meal;
+@property Meal *meal; // not sure this goes here
 
 -(void)leftClickAction;
 -(void)rightClickAction;

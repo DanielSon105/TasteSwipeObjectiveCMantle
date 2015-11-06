@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
-    [self getMealInfo];
+//    [self getMealInfo];
 
     //LOAD MEALS HERE... for now we'll load up 5 random ones... we need to write algorithm after though
     //
@@ -85,56 +85,56 @@
 }
 
 
--(void)getMealInfo
-{
-
-    NSURLSessionConfiguration *sessionConfig =
-    [NSURLSessionConfiguration defaultSessionConfiguration];
-    [sessionConfig setHTTPAdditionalHeaders:
-     @{@"Accept": @"application/json", @"Content-Type": @"application/json"}];
-
-    NSURLSession *session =
-    [NSURLSession sessionWithConfiguration:sessionConfig
-                                  delegate:self
-                             delegateQueue:nil];
-
-    NSURL *url =[NSURL URLWithString:@"http://tasteswipe-int.herokuapp.com/meal"];
-
-    NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-
-        if (error != nil) {
-            NSLog(@"---> ERROR :: %@", error);
-        }
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-
-            self.getMealDictionaryJSON = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-
-
-            self.arrayOfMeals = [NSMutableArray new];
-            NSLog(@"getMealDictionaryJSON %@", self.getMealDictionaryJSON);
-
-            Meal *meal = [[Meal alloc] initMealWithContentsOfDictionary:self.getMealDictionaryJSON];
-
-            self.meal1 = meal;
-            self.meal2 = meal;
-            self.meal3 = meal;
-            self.meal4 = meal;
-            self.meal5 = meal;
-
-            [self.arrayOfMeals addObject:meal];
-
-            NSLog(@"%@", self.arrayOfMeals);
-            for (Meal *temp in self.arrayOfMeals) {
-                NSLog(@"%@", temp.mealName);
-
-            }
-        });
-    }];
-    
-    [task resume];
-    
-}
+//-(void)getMealInfo
+//{
+//
+//    NSURLSessionConfiguration *sessionConfig =
+//    [NSURLSessionConfiguration defaultSessionConfiguration];
+//    [sessionConfig setHTTPAdditionalHeaders:
+//     @{@"Accept": @"application/json", @"Content-Type": @"application/json"}];
+//
+//    NSURLSession *session =
+//    [NSURLSession sessionWithConfiguration:sessionConfig
+//                                  delegate:self
+//                             delegateQueue:nil];
+//
+//    NSURL *url =[NSURL URLWithString:@"http://tasteswipe-int.herokuapp.com/meal"];
+//
+//    NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//
+//        if (error != nil) {
+//            NSLog(@"---> ERROR :: %@", error);
+//        }
+//
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//
+//            self.getMealDictionaryJSON = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+//
+//
+//            self.arrayOfMeals = [NSMutableArray new];
+//            NSLog(@"getMealDictionaryJSON %@", self.getMealDictionaryJSON);
+//
+//            Meal *meal = [[Meal alloc] initMealWithContentsOfDictionary:self.getMealDictionaryJSON];
+//
+//            self.meal1 = meal;
+//            self.meal2 = meal;
+//            self.meal3 = meal;
+//            self.meal4 = meal;
+//            self.meal5 = meal;
+//
+//            [self.arrayOfMeals addObject:meal];
+//
+//            NSLog(@"%@", self.arrayOfMeals);
+//            for (Meal *temp in self.arrayOfMeals) {
+//                NSLog(@"%@", temp.mealName);
+//
+//            }
+//        });
+//    }];
+//    
+//    [task resume];
+//    
+//}
 
 
 

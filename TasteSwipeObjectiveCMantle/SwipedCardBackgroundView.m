@@ -8,20 +8,30 @@
 
 #import "SwipedCardBackgroundView.h"
 #import "Meal.h"
+#import <UIKit/UIKit.h>
 
 @implementation SwipedCardBackgroundView {
 
 NSInteger cardsLoadedIndex; // the index of the card you have loaded into the loadedCards array last
 NSMutableArray *loadedCards; // the array of card loaded (change max_buffer_size to increase or decrease the number of cards this holds)
 
+NSDictionary *getMealDictionaryJSON;
+NSMutableArray *arrayOfMealDictionaries;
+NSMutableArray *arrayOfMeals; //
+
 UIButton *menuButton;
 UIButton *messageButton;
 UIButton *checkButton;
 UIButton *xButton;
 }
+//
+//@property NSDictionary *getMealDictionaryJSON;
+//@property NSMutableArray *arrayOfMeals;
+//@property NSString *identification;
 
 //this makes it so only two cards are loaded at a time to
 //avoid performance and memory costs
+
 static const int MAX_BUFFER_SIZE = 2; // max number of cards loaded at any given time, must be greater than 1
 static const float CARD_HEIGHT = 386; // height of the draggable card
 static const float CARD_WIDTH = 290; // width of the draggable card
@@ -48,29 +58,101 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 
     //Load Meals
 
-    exampleCardLabels = [[NSArray alloc]initWithObjects:@"meal1",@"meal2",@"meal3", nil]; //%%% placeholder for card-specific information ..... instead of these placeholders, use cards....
-    //randomlyOrAlgorithmicallyLoadedMeal
-    loadedCards = [[NSMutableArray alloc] init];
-    allCards = [[NSMutableArray alloc] init];
-    cardsLoadedIndex = 0;
-    [self loadCards];
+
+    [self getMealInfo];
+//    exampleCardLabels = [[NSArray alloc]initWithObjects:@"meal1",@"meal2",@"meal3", nil]; //%%% placeholder for card-specific information ..... instead of these placeholders, use cards....
+//    //randomlyOrAlgorithmicallyLoadedMeal
+//    loadedCards = [[NSMutableArray alloc] init];
+//    allCards = [[NSMutableArray alloc] init];
+//    cardsLoadedIndex = 0;
+//    [self loadCards];
 }
+
+-(void)loadMeals{
+    
+}
+
+-(void)getMealInfo
+{
+
+    NSURLSessionConfiguration *sessionConfig =
+    [NSURLSessionConfiguration defaultSessionConfiguration];
+    [sessionConfig setHTTPAdditionalHeaders:
+     @{@"Accept": @"application/json", @"Content-Type": @"application/json"}];
+
+    NSURLSession *session =
+    [NSURLSession sessionWithConfiguration:sessionConfig
+                                  delegate:self
+                             delegateQueue:nil];
+
+    NSURL *url =[NSURL URLWithString:@"http://tasteswipe-int.herokuapp.com/random_meals"];
+
+    NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+
+        if (error != nil) {
+            NSLog(@"---> ERROR :: %@", error);
+        }
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+
+            getMealDictionaryJSON = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+            arrayOfMealDictionaries = [getMealDictionaryJSON objectForKey:@"meals"];
+            arrayOfMeals = [NSMutableArray new];
+            NSLog(@"getMealDictionaryJSON %@", getMealDictionaryJSON);
+
+            for (NSDictionary *dict in arrayOfMealDictionaries) {
+                Meal *meal = [[Meal alloc] initMealWithContentsOfDictionary:dict];
+                [arrayOfMeals addObject:meal];
+//                NSArray *array = [mutableArray copy];
+//                    NSLog(@"%@", meal.mealName);
+            }
+            NSLog(@"%@", arrayOfMeals);
+            exampleCardLabels = [arrayOfMeals copy];
+            loadedCards = [[NSMutableArray alloc] init];
+            allCards = [[NSMutableArray alloc] init];
+            cardsLoadedIndex = 0;
+            [self loadCards];
+        });
+    }];
+    
+    [task resume];
+    
+}
+
+
+
+
+
+
+
+
 
 #pragma mark - Extra Button Setup
 
 -(void)setupView
 {
     self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1]; //the gray background colors
+
     menuButton = [[UIButton alloc]initWithFrame:CGRectMake(17, 34, 22, 15)];
+
     [menuButton setImage:[UIImage imageNamed:@"menuButton"] forState:UIControlStateNormal];
+
     messageButton = [[UIButton alloc]initWithFrame:CGRectMake(284, 34, 18, 18)];
+
     [messageButton setImage:[UIImage imageNamed:@"messageButton"] forState:UIControlStateNormal];
+
     xButton = [[UIButton alloc]initWithFrame:CGRectMake(60, 485, 59, 59)];
+
     [xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
+
     [xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
+
     checkButton = [[UIButton alloc]initWithFrame:CGRectMake(200, 485, 59, 59)];
+
     [checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
+
     [checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
+
     [self addSubview:menuButton];
     [self addSubview:messageButton];
     [self addSubview:xButton];
@@ -88,12 +170,12 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 {
     SwipedCardView *swipedCardView = [[SwipedCardView alloc]initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
 
-//    Meal *swipedMeal = [exampleCardLabels objectAtIndex:index];
-//    swipedCardView.information.text = swipedMeal.mealName;
+    Meal *swipedMeal = [exampleCardLabels objectAtIndex:index];
+    swipedCardView.information.text = swipedMeal.mealName;
+    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: swipedMeal.mealImageURL]];
+    swipedCardView.mealPicture.image = [UIImage imageWithData: imageData];
 
-    swipedCardView.information.text = [exampleCardLabels objectAtIndex:index];
-//    swipedCardView.meal = randomlyOrAlgorithmicallyLoadedMeal; *******
-
+//    swipedCardView.information.text = [exampleCardLabels objectAtIndex:index];
     swipedCardView.delegate = self;
     return swipedCardView;
 }
