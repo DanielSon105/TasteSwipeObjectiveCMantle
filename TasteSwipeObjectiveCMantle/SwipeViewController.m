@@ -116,11 +116,11 @@
 
             Meal *meal = [[Meal alloc] initMealWithContentsOfDictionary:self.getMealDictionaryJSON];
 
-//            self.meal1 = meal;
-//            self.meal2 = meal;
-//            self.meal3 = meal;
-//            self.meal4 = meal;
-//            self.meal5 = meal;
+            self.meal1 = meal;
+            self.meal2 = meal;
+            self.meal3 = meal;
+            self.meal4 = meal;
+            self.meal5 = meal;
 
             [self.arrayOfMeals addObject:meal];
 

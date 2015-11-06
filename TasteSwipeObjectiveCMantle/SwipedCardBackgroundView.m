@@ -7,28 +7,29 @@
 //
 
 #import "SwipedCardBackgroundView.h"
+#import "Meal.h"
 
 @implementation SwipedCardBackgroundView {
 
-NSInteger cardsLoadedIndex; //%%% the index of the card you have loaded into the loadedCards array last
-NSMutableArray *loadedCards; //%%% the array of card loaded (change max_buffer_size to increase or decrease the number of cards this holds)
+NSInteger cardsLoadedIndex; // the index of the card you have loaded into the loadedCards array last
+NSMutableArray *loadedCards; // the array of card loaded (change max_buffer_size to increase or decrease the number of cards this holds)
 
-UIButton* menuButton;
-UIButton* messageButton;
-UIButton* checkButton;
-UIButton* xButton;
+UIButton *menuButton;
+UIButton *messageButton;
+UIButton *checkButton;
+UIButton *xButton;
 }
 
 //this makes it so only two cards are loaded at a time to
 //avoid performance and memory costs
-static const int MAX_BUFFER_SIZE = 2; //%%% max number of cards loaded at any given time, must be greater than 1
-static const float CARD_HEIGHT = 386; //%%% height of the draggable card
-static const float CARD_WIDTH = 290; //%%% width of the draggable card
+static const int MAX_BUFFER_SIZE = 2; // max number of cards loaded at any given time, must be greater than 1
+static const float CARD_HEIGHT = 386; // height of the draggable card
+static const float CARD_WIDTH = 290; // width of the draggable card
 
-@synthesize exampleCardLabels; //%%% all the labels I'm using as example data at the moment
-@synthesize allCards;//%%% all the cards
+@synthesize exampleCardLabels; // all the labels I'm using as example data at the moment
+@synthesize allCards;// all the cards
 
-#pragma mark - Don't Forgot to Initialize Meal With Card
+#pragma mark - Don't Forget to Initialize Meal With Card
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -38,26 +39,27 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         [super layoutSubviews];
         [self setupView];
     }
-
         return self;
 }
 
--(void)changeMeMethod{
+#pragma mark - Change Me Method
+
+-(void)changeMeMethod{  //NEED to populate exampleCardLabels
 
     //Load Meals
-    exampleCardLabels = [[NSArray alloc]initWithObjects:@"meal1",@"meal2",@"meal3",@"meal4",@"meal5", nil]; //%%% placeholder for card-specific information ..... instead of these placeholders, use cards....
+
+    exampleCardLabels = [[NSArray alloc]initWithObjects:@"meal1",@"meal2",@"meal3", nil]; //%%% placeholder for card-specific information ..... instead of these placeholders, use cards....
     //randomlyOrAlgorithmicallyLoadedMeal
     loadedCards = [[NSMutableArray alloc] init];
     allCards = [[NSMutableArray alloc] init];
     cardsLoadedIndex = 0;
     [self loadCards];
-
 }
 
-//%%% sets up the extra buttons on the screen
+#pragma mark - Extra Button Setup
+
 -(void)setupView
 {
-#pragma mark - customize all of this.  These are just place holders to make it look pretty
     self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1]; //the gray background colors
     menuButton = [[UIButton alloc]initWithFrame:CGRectMake(17, 34, 22, 15)];
     [menuButton setImage:[UIImage imageNamed:@"menuButton"] forState:UIControlStateNormal];
@@ -79,18 +81,28 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
 //%%% creates a card and returns it.  This should be customized to fit your needs.
 // use "index" to indicate where the information should be pulled.  If this doesn't apply to you, feel free
 // to get rid of it (eg: if you are building cards from data from the internet)
+
+
+
 -(SwipedCardView *)createSwipedCardViewWithDataAtIndex:(NSInteger)index
 {
     SwipedCardView *swipedCardView = [[SwipedCardView alloc]initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
-    Meal *swipedMeal = [exampleCardLabels objectAtIndex:index];
-//    swipedCardView.information.text = [exampleCardLabels objectAtIndex:index];
-    swipedCardView.information.text = swipedMeal.mealName;
+
+//    Meal *swipedMeal = [exampleCardLabels objectAtIndex:index];
+//    swipedCardView.information.text = swipedMeal.mealName;
+
+    swipedCardView.information.text = [exampleCardLabels objectAtIndex:index];
 //    swipedCardView.meal = randomlyOrAlgorithmicallyLoadedMeal; *******
+
     swipedCardView.delegate = self;
     return swipedCardView;
 }
 
+
+#pragma mark - CHANGE exampleCardLabels
+
 //%%% loads all the cards and puts the first x in the "loaded cards" array
+
 -(void)loadCards
 {
     if([exampleCardLabels count] > 0) {
@@ -98,6 +110,7 @@ static const float CARD_WIDTH = 290; //%%% width of the draggable card
         //%%% if the buffer size is greater than the data size, there will be an array error, so this makes sure that doesn't happen
 
         //%%% loops through the exampleCardsLabels array to create a card for each label.  This should be customized by removing "exampleCardLabels" with your own array of data
+
         for (int i = 0; i<[exampleCardLabels count]; i++) {
             SwipedCardView* newCard = [self createSwipedCardViewWithDataAtIndex:i]; //SwipedCardView
             [allCards addObject:newCard];
