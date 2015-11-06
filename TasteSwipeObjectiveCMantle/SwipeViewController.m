@@ -75,13 +75,9 @@
 
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 
-
-
         //do stuff
-
     }];
     [postDataTask resume];
-    
 }
 
 
@@ -135,13 +131,6 @@
 //    [task resume];
 //    
 //}
-
-
-
-
-
-
-
 
 
 /*

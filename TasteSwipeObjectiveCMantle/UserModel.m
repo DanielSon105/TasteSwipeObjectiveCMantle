@@ -80,9 +80,7 @@
         kDateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
         kDateFormatter.dateFormat = @"yyyy-MM-dd";  // you configure this based on the strings that your webservice uses!!
     });
-
     return kDateFormatter;
 }
-
 
 @end
