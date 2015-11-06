@@ -75,15 +75,10 @@
 
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 
-
-
         //do stuff
-
     }];
     [postDataTask resume];
-    
 }
-
 
 -(void)getMealInfo
 {
@@ -127,22 +122,11 @@
             NSLog(@"%@", self.arrayOfMeals);
             for (Meal *temp in self.arrayOfMeals) {
                 NSLog(@"%@", temp.mealName);
-
             }
         });
     }];
-    
     [task resume];
-    
 }
-
-
-
-
-
-
-
-
 
 /*
 #pragma mark - Navigation
