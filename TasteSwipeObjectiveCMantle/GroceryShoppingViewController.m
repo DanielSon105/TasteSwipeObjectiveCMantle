@@ -12,7 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
-@property NSArray *grocery;
+@property NSArray *groceries;
 
 @end
 
@@ -20,16 +20,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    return [textField resignFirstResponder];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.grocery.count;
+    return self.groceries.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GroceryShopping" forIndexPath:indexPath];
-    cell.textLabel.text = self.grocery;
+
+// check into this...it doesn't feel right
+//    Grocery *grocery = [self.groceries objectAtIndex:indexPath.row];
+//    cell.textLabel.text = grocery;
+
     return cell;
 }
 

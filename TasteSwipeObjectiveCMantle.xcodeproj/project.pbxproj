@@ -10,6 +10,7 @@
 		B034EDB91BEBFD2600E8571D /* MealDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B034EDB81BEBFD2600E8571D /* MealDetailViewController.m */; };
 		B034EDBC1BEC01FE00E8571D /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B034EDBB1BEC01FE00E8571D /* RecipeViewController.m */; };
 		B034EDBF1BEC04F400E8571D /* GroceryShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B034EDBE1BEC04F400E8571D /* GroceryShoppingViewController.m */; };
+		B034EDE81BEC326D00E8571D /* Grocery.m in Sources */ = {isa = PBXBuildFile; fileRef = B034EDE71BEC326D00E8571D /* Grocery.m */; };
 		DF2CB243DC7A990F7B1B0D1D /* libPods-TasteSwipeObjectiveCMantle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3290F604B43CC7B4E6495C4 /* libPods-TasteSwipeObjectiveCMantle.a */; };
 		E01EA2761BEA8C06002119B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2751BEA8C06002119B7 /* main.m */; };
 		E01EA2791BEA8C06002119B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2781BEA8C06002119B7 /* AppDelegate.m */; };
@@ -59,6 +60,8 @@
 		B034EDBB1BEC01FE00E8571D /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
 		B034EDBD1BEC04F400E8571D /* GroceryShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryShoppingViewController.h; sourceTree = "<group>"; };
 		B034EDBE1BEC04F400E8571D /* GroceryShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryShoppingViewController.m; sourceTree = "<group>"; };
+		B034EDE61BEC326D00E8571D /* Grocery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grocery.h; sourceTree = "<group>"; };
+		B034EDE71BEC326D00E8571D /* Grocery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grocery.m; sourceTree = "<group>"; };
 		E01EA2711BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteSwipeObjectiveCMantle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01EA2751BEA8C06002119B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E01EA2771BEA8C06002119B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -184,8 +187,8 @@
 				E01EA2851BEA8C06002119B7 /* LaunchScreen.storyboard */,
 				E01EA2881BEA8C06002119B7 /* Info.plist */,
 				E01EA2801BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodeld */,
-				E01EA2741BEA8C06002119B7 /* Supporting Files */,
 				E01EA2C61BEAC803002119B7 /* CustomClasses */,
+				E01EA2741BEA8C06002119B7 /* Supporting Files */,
 			);
 			path = TasteSwipeObjectiveCMantle;
 			sourceTree = "<group>";
@@ -229,6 +232,8 @@
 				E01EA3251BEBBA39002119B7 /* User.m */,
 				E01EA3271BEBBA52002119B7 /* Consumable.h */,
 				E01EA3281BEBBA52002119B7 /* Consumable.m */,
+				B034EDE61BEC326D00E8571D /* Grocery.h */,
+				B034EDE71BEC326D00E8571D /* Grocery.m */,
 			);
 			name = CustomClasses;
 			sourceTree = "<group>";
@@ -438,6 +443,7 @@
 				E01EA2B21BEA9675002119B7 /* SwipeViewController.m in Sources */,
 				E01EA3261BEBBA39002119B7 /* User.m in Sources */,
 				E01EA2821BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodeld in Sources */,
+				B034EDE81BEC326D00E8571D /* Grocery.m in Sources */,
 				E01EA2D81BEACE98002119B7 /* MealModel.m in Sources */,
 				B034EDBF1BEC04F400E8571D /* GroceryShoppingViewController.m in Sources */,
 				E01EA3291BEBBA52002119B7 /* Consumable.m in Sources */,
