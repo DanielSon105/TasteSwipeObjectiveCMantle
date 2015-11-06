@@ -63,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="901.5" y="387"/>
+            <point key="canvasLocation" x="1011" y="387"/>
         </scene>
         <!--To Try List View Controller-->
         <scene sceneID="ZtK-te-Z6Y">
@@ -76,13 +76,175 @@
                     <view key="view" contentMode="scaleToFill" id="GdR-yp-xUz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Wd-aF-v16">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToTryCell" rowHeight="108" id="h7o-YW-wFk" customClass="ToTryListTableViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h7o-YW-wFk" id="8fm-oy-cEM">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jQ-9a-sUU">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Photo"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="8" y="8" width="89" height="91.5"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="onMealPictureButtonTapped:" destination="h7o-YW-wFk" eventType="touchUpInside" id="61w-bW-bLh"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgA-2c-Dv8">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Add"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="307" y="8" width="85" height="89.5"/>
+                                                    </variation>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQK-T0-Dbw">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Meal Name"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="112" y="20" width="187" height="30"/>
+                                                    </variation>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3g-uK-69k">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="S1"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="112" y="58" width="31" height="30"/>
+                                                    </variation>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPa-Dm-Nmp">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="S2"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="151" y="58" width="31" height="30"/>
+                                                    </variation>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20C-pR-TdV">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="S3"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="190" y="58" width="31" height="30"/>
+                                                    </variation>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0E-0q-huF">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="S4"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="229" y="58" width="31" height="30"/>
+                                                    </variation>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Orl-jY-rNS">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="S5"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="268" y="58" width="31" height="30"/>
+                                                    </variation>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="3jQ-9a-sUU"/>
+                                                    <exclude reference="WgA-2c-Dv8"/>
+                                                    <exclude reference="aQK-T0-Dbw"/>
+                                                    <exclude reference="w3g-uK-69k"/>
+                                                    <exclude reference="xPa-Dm-Nmp"/>
+                                                    <exclude reference="20C-pR-TdV"/>
+                                                    <exclude reference="m0E-0q-huF"/>
+                                                    <exclude reference="Orl-jY-rNS"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="3jQ-9a-sUU"/>
+                                                    <include reference="WgA-2c-Dv8"/>
+                                                    <include reference="aQK-T0-Dbw"/>
+                                                    <include reference="w3g-uK-69k"/>
+                                                    <include reference="xPa-Dm-Nmp"/>
+                                                    <include reference="20C-pR-TdV"/>
+                                                    <include reference="m0E-0q-huF"/>
+                                                    <include reference="Orl-jY-rNS"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Afe-OG-iIa" id="VBw-4d-t25"/>
+                                    <outlet property="delegate" destination="Afe-OG-iIa" id="nJK-h1-yv2"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gth-bE-crt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gth-bE-crt" firstAttribute="leading" secondItem="GdR-yp-xUz" secondAttribute="leadingMargin" constant="-20" id="2d3-Af-PqP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Wd-aF-v16" secondAttribute="trailing" constant="-20" id="3Vc-Wq-EL6"/>
+                            <constraint firstItem="1Wd-aF-v16" firstAttribute="leading" secondItem="GdR-yp-xUz" secondAttribute="leadingMargin" constant="-20" id="JY9-of-mR7"/>
+                            <constraint firstItem="1Wd-aF-v16" firstAttribute="top" secondItem="gth-bE-crt" secondAttribute="bottom" id="QlZ-3r-wTB"/>
+                            <constraint firstItem="1Wd-aF-v16" firstAttribute="top" secondItem="gth-bE-crt" secondAttribute="bottom" id="S6e-5y-RkZ"/>
+                            <constraint firstItem="gth-bE-crt" firstAttribute="top" secondItem="h7B-z8-o63" secondAttribute="bottom" id="iUf-cL-Zgl"/>
+                            <constraint firstItem="85d-ja-sgo" firstAttribute="top" secondItem="1Wd-aF-v16" secondAttribute="bottom" id="zK4-3W-QGu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gth-bE-crt" secondAttribute="trailing" constant="-20" id="zcs-4n-j4H"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1Wd-aF-v16"/>
+                                <exclude reference="gth-bE-crt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2d3-Af-PqP"/>
+                                <exclude reference="iUf-cL-Zgl"/>
+                                <exclude reference="zcs-4n-j4H"/>
+                                <exclude reference="3Vc-Wq-EL6"/>
+                                <exclude reference="JY9-of-mR7"/>
+                                <exclude reference="QlZ-3r-wTB"/>
+                                <exclude reference="S6e-5y-RkZ"/>
+                                <exclude reference="zK4-3W-QGu"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1Wd-aF-v16"/>
+                                <include reference="gth-bE-crt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2d3-Af-PqP"/>
+                                <include reference="iUf-cL-Zgl"/>
+                                <include reference="zcs-4n-j4H"/>
+                                <include reference="3Vc-Wq-EL6"/>
+                                <include reference="JY9-of-mR7"/>
+                                <include reference="QlZ-3r-wTB"/>
+                                <include reference="S6e-5y-RkZ"/>
+                                <include reference="zK4-3W-QGu"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="1Wd-aF-v16" id="fJr-xo-ENp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGQ-0l-3pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1593" y="387"/>
+            <point key="canvasLocation" x="1665" y="348"/>
         </scene>
         <!--Meal Detail View Controller-->
         <scene sceneID="NNd-83-S0T">

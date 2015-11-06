@@ -32,6 +32,8 @@
 		E01EA3231BEBBA2B002119B7 /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA3221BEBBA2B002119B7 /* Meal.m */; };
 		E01EA3261BEBBA39002119B7 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA3251BEBBA39002119B7 /* User.m */; };
 		E01EA3291BEBBA52002119B7 /* Consumable.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA3281BEBBA52002119B7 /* Consumable.m */; };
+		E07F8F4E1BED0CB000E2E1E4 /* ToTryListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E07F8F4D1BED0CB000E2E1E4 /* ToTryListTableViewCell.m */; };
+		E07F8F511BED0CD400E2E1E4 /* ToTryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E07F8F501BED0CD400E2E1E4 /* ToTryListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,10 @@
 		E01EA3251BEBBA39002119B7 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		E01EA3271BEBBA52002119B7 /* Consumable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Consumable.h; sourceTree = "<group>"; };
 		E01EA3281BEBBA52002119B7 /* Consumable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Consumable.m; sourceTree = "<group>"; };
+		E07F8F4C1BED0CB000E2E1E4 /* ToTryListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToTryListTableViewCell.h; sourceTree = "<group>"; };
+		E07F8F4D1BED0CB000E2E1E4 /* ToTryListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToTryListTableViewCell.m; sourceTree = "<group>"; };
+		E07F8F4F1BED0CD400E2E1E4 /* ToTryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToTryListViewController.h; sourceTree = "<group>"; };
+		E07F8F501BED0CD400E2E1E4 /* ToTryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToTryListViewController.m; sourceTree = "<group>"; };
 		EA664A421B80E6424FB40E97 /* Pods-TasteSwipeObjectiveCMantle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TasteSwipeObjectiveCMantle.release.xcconfig"; path = "Pods/Target Support Files/Pods-TasteSwipeObjectiveCMantle/Pods-TasteSwipeObjectiveCMantle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +187,8 @@
 				B034EDBB1BEC01FE00E8571D /* RecipeViewController.m */,
 				B034EDBD1BEC04F400E8571D /* GroceryShoppingViewController.h */,
 				B034EDBE1BEC04F400E8571D /* GroceryShoppingViewController.m */,
+				E07F8F4F1BED0CD400E2E1E4 /* ToTryListViewController.h */,
+				E07F8F501BED0CD400E2E1E4 /* ToTryListViewController.m */,
 				E01EA2C01BEAA32B002119B7 /* OverlayView.h */,
 				E01EA2C11BEAA32B002119B7 /* OverlayView.m */,
 				E01EA2831BEA8C06002119B7 /* Assets.xcassets */,
@@ -222,6 +230,8 @@
 		E01EA2C61BEAC803002119B7 /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
+				E07F8F4C1BED0CB000E2E1E4 /* ToTryListTableViewCell.h */,
+				E07F8F4D1BED0CB000E2E1E4 /* ToTryListTableViewCell.m */,
 				E01EA2D31BEACE86002119B7 /* UserModel.h */,
 				E01EA2D41BEACE86002119B7 /* UserModel.m */,
 				E01EA2D61BEACE98002119B7 /* MealModel.h */,
@@ -439,9 +449,11 @@
 				B034EDB91BEBFD2600E8571D /* MealDetailViewController.m in Sources */,
 				E01EA2BC1BEA9AF2002119B7 /* SwipedCardBackgroundView.m in Sources */,
 				E01EA2761BEA8C06002119B7 /* main.m in Sources */,
+				E07F8F511BED0CD400E2E1E4 /* ToTryListViewController.m in Sources */,
 				E01EA2C21BEAA32B002119B7 /* OverlayView.m in Sources */,
 				E01EA2B21BEA9675002119B7 /* SwipeViewController.m in Sources */,
 				E01EA3261BEBBA39002119B7 /* User.m in Sources */,
+				E07F8F4E1BED0CB000E2E1E4 /* ToTryListTableViewCell.m in Sources */,
 				E01EA2821BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodeld in Sources */,
 				B034EDE81BEC326D00E8571D /* Grocery.m in Sources */,
 				E01EA2D81BEACE98002119B7 /* MealModel.m in Sources */,
