@@ -85,6 +85,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h7o-YW-wFk" id="8fm-oy-cEM">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="107.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jQ-9a-sUU">
@@ -120,61 +121,6 @@
                                                         <action selector="onMealNameButtonTapped:" destination="h7o-YW-wFk" eventType="touchUpInside" id="zum-of-aP1"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3g-uK-69k">
-                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                    <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="S1"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="112" y="58" width="31" height="30"/>
-                                                    </variation>
-                                                    <connections>
-                                                        <action selector="onStarOneButtonTapped:" destination="h7o-YW-wFk" eventType="touchUpInside" id="oMJ-lN-7dV"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPa-Dm-Nmp">
-                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                    <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="S2"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="151" y="58" width="31" height="30"/>
-                                                    </variation>
-                                                    <connections>
-                                                        <action selector="onStarTwoButtonTapped:" destination="h7o-YW-wFk" eventType="touchUpInside" id="Rlq-hp-rpK"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20C-pR-TdV">
-                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                    <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="S3"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="190" y="58" width="31" height="30"/>
-                                                    </variation>
-                                                    <connections>
-                                                        <action selector="onStarThreeButtonTapped:" destination="h7o-YW-wFk" eventType="touchUpInside" id="faB-fL-Zo6"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0E-0q-huF">
-                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                    <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="S4"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="229" y="58" width="31" height="30"/>
-                                                    </variation>
-                                                    <connections>
-                                                        <action selector="onStarFourButtonTapped:" destination="h7o-YW-wFk" eventType="touchUpInside" id="efU-fn-aZp"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Orl-jY-rNS">
-                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                    <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" title="S5"/>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="268" y="58" width="31" height="30"/>
-                                                    </variation>
-                                                    <connections>
-                                                        <action selector="onStarFiveButtonTapped:" destination="h7o-YW-wFk" eventType="touchUpInside" id="tNk-Ls-ilk"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <variation key="default">
@@ -182,11 +128,6 @@
                                                     <exclude reference="3jQ-9a-sUU"/>
                                                     <exclude reference="WgA-2c-Dv8"/>
                                                     <exclude reference="aQK-T0-Dbw"/>
-                                                    <exclude reference="w3g-uK-69k"/>
-                                                    <exclude reference="xPa-Dm-Nmp"/>
-                                                    <exclude reference="20C-pR-TdV"/>
-                                                    <exclude reference="m0E-0q-huF"/>
-                                                    <exclude reference="Orl-jY-rNS"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -194,11 +135,6 @@
                                                     <include reference="3jQ-9a-sUU"/>
                                                     <include reference="WgA-2c-Dv8"/>
                                                     <include reference="aQK-T0-Dbw"/>
-                                                    <include reference="w3g-uK-69k"/>
-                                                    <include reference="xPa-Dm-Nmp"/>
-                                                    <include reference="20C-pR-TdV"/>
-                                                    <include reference="m0E-0q-huF"/>
-                                                    <include reference="Orl-jY-rNS"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -232,6 +168,7 @@
                                 <exclude reference="gth-bE-crt"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="zK4-3W-QGu"/>
                                 <exclude reference="2d3-Af-PqP"/>
                                 <exclude reference="iUf-cL-Zgl"/>
                                 <exclude reference="zcs-4n-j4H"/>
@@ -239,7 +176,6 @@
                                 <exclude reference="JY9-of-mR7"/>
                                 <exclude reference="QlZ-3r-wTB"/>
                                 <exclude reference="S6e-5y-RkZ"/>
-                                <exclude reference="zK4-3W-QGu"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -248,6 +184,7 @@
                                 <include reference="gth-bE-crt"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="zK4-3W-QGu"/>
                                 <include reference="2d3-Af-PqP"/>
                                 <include reference="iUf-cL-Zgl"/>
                                 <include reference="zcs-4n-j4H"/>
@@ -255,7 +192,6 @@
                                 <include reference="JY9-of-mR7"/>
                                 <include reference="QlZ-3r-wTB"/>
                                 <include reference="S6e-5y-RkZ"/>
-                                <include reference="zK4-3W-QGu"/>
                             </mask>
                         </variation>
                     </view>

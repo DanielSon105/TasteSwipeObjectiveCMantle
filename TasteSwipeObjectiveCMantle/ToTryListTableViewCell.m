@@ -30,16 +30,5 @@
 
 - (IBAction)onMealNameButtonTapped:(id)sender {
 }
-- (IBAction)onStarOneButtonTapped:(id)sender {
-}
-- (IBAction)onStarTwoButtonTapped:(id)sender {
-}
-- (IBAction)onStarThreeButtonTapped:(id)sender {
-}
-- (IBAction)onStarFourButtonTapped:(id)sender {
-}
-- (IBAction)onStarFiveButtonTapped:(id)sender {
-}
-
 
 @end
