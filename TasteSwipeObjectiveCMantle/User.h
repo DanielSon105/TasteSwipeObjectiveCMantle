@@ -10,4 +10,26 @@
 
 @interface User : NSObject
 
+@property NSString *identification;
+@property NSString *email;
+
+@property NSString *token;
+
+
+
+@property NSString *fullName;
+@property NSString *firstName;
+@property NSString *lastName;
+@property NSString *username;
+
+
+@property BOOL isNormalUser;
+@property BOOL isContributor;
+@property BOOL isAdmin;
+
+
+
+@property NSArray *toTryMealArray;
+@property NSArray *hasTriedMealArray;
+
 @end

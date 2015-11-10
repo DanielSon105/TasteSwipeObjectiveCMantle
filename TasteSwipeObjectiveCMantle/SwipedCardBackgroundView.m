@@ -39,6 +39,8 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 @synthesize exampleCardLabels; // all the labels I'm using as example data at the moment
 @synthesize allCards;// all the cards
 
+@synthesize user;
+
 #pragma mark - Don't Forget to Initialize Meal With Card
 
 - (id)initWithFrame:(CGRect)frame
@@ -59,7 +61,8 @@ static const float CARD_WIDTH = 290; // width of the draggable card
     //Load Meals
 
 
-    [self getMealInfo];
+    [self getMealInfo:self.user.token];
+    NSLog(@"get Meal Info Token --> %@", self.user.token);
 //    exampleCardLabels = [[NSArray alloc]initWithObjects:@"meal1",@"meal2",@"meal3", nil]; //%%% placeholder for card-specific information ..... instead of these placeholders, use cards....
 //    //randomlyOrAlgorithmicallyLoadedMeal
 //    loadedCards = [[NSMutableArray alloc] init];
@@ -72,20 +75,25 @@ static const float CARD_WIDTH = 290; // width of the draggable card
     
 }
 
--(void)getMealInfo
+-(void)getMealInfo:(NSString *)token
 {
 
     NSURLSessionConfiguration *sessionConfig =
     [NSURLSessionConfiguration defaultSessionConfiguration];
-    [sessionConfig setHTTPAdditionalHeaders:
-     @{@"Accept": @"application/json", @"Content-Type": @"application/json"}];
 
     NSURLSession *session =
-    [NSURLSession sessionWithConfiguration:sessionConfig
-                                  delegate:self
-                             delegateQueue:nil];
+    [NSURLSession sessionWithConfiguration:sessionConfig delegate:nil delegateQueue:nil];
 
-    NSURL *url =[NSURL URLWithString:@"http://tasteswipe-int.herokuapp.com/random_meals"];
+
+    NSURL *url = [NSURL URLWithString:@"http://tasteswipe-int.herokuapp.com/random_meals"];
+
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+
+    [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Accept"];
+
+    [request setValue:[NSString stringWithFormat:@"Token token=\"%@\"; charset=utf-8", token] forHTTPHeaderField:@"Authorization"];
+
 
     NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 
@@ -171,25 +179,15 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 -(void)setupView
 {
     self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1]; //the gray background colors
-
     menuButton = [[UIButton alloc]initWithFrame:CGRectMake(17, 34, 22, 15)];
-
     [menuButton setImage:[UIImage imageNamed:@"menuButton"] forState:UIControlStateNormal];
-
     messageButton = [[UIButton alloc]initWithFrame:CGRectMake(284, 34, 18, 18)];
-
     [messageButton setImage:[UIImage imageNamed:@"messageButton"] forState:UIControlStateNormal];
-
     xButton = [[UIButton alloc]initWithFrame:CGRectMake(60, 485, 59, 59)];
-
     [xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
-
     [xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
-
     checkButton = [[UIButton alloc]initWithFrame:CGRectMake(200, 485, 59, 59)];
-
     [checkButton setImage:[UIImage imageNamed:@"checkButton"] forState:UIControlStateNormal];
-
     [checkButton addTarget:self action:@selector(swipeRight) forControlEvents:UIControlEventTouchUpInside];
 
     [self addSubview:menuButton];

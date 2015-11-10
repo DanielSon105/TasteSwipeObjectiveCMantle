@@ -14,7 +14,6 @@
 		DF2CB243DC7A990F7B1B0D1D /* libPods-TasteSwipeObjectiveCMantle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3290F604B43CC7B4E6495C4 /* libPods-TasteSwipeObjectiveCMantle.a */; };
 		E01EA2761BEA8C06002119B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2751BEA8C06002119B7 /* main.m */; };
 		E01EA2791BEA8C06002119B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2781BEA8C06002119B7 /* AppDelegate.m */; };
-		E01EA27C1BEA8C06002119B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA27B1BEA8C06002119B7 /* ViewController.m */; };
 		E01EA27F1BEA8C06002119B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01EA27D1BEA8C06002119B7 /* Main.storyboard */; };
 		E01EA2821BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E01EA2801BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodeld */; };
 		E01EA2841BEA8C06002119B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E01EA2831BEA8C06002119B7 /* Assets.xcassets */; };
@@ -34,6 +33,10 @@
 		E01EA3291BEBBA52002119B7 /* Consumable.m in Sources */ = {isa = PBXBuildFile; fileRef = E01EA3281BEBBA52002119B7 /* Consumable.m */; };
 		E07F8F4E1BED0CB000E2E1E4 /* ToTryListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E07F8F4D1BED0CB000E2E1E4 /* ToTryListTableViewCell.m */; };
 		E07F8F511BED0CD400E2E1E4 /* ToTryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E07F8F501BED0CD400E2E1E4 /* ToTryListViewController.m */; };
+		E0E286351BF0F746002A9C0C /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E286341BF0F746002A9C0C /* WelcomeViewController.m */; };
+		E0E286381BF0F7CF002A9C0C /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E286371BF0F7CF002A9C0C /* SignUpViewController.m */; };
+		E0E2863E1BF10537002A9C0C /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E2863D1BF10537002A9C0C /* SettingsViewController.m */; };
+		E0E286411BF1075A002A9C0C /* AppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E286401BF1075A002A9C0C /* AppSettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +71,6 @@
 		E01EA2751BEA8C06002119B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E01EA2771BEA8C06002119B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E01EA2781BEA8C06002119B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E01EA27A1BEA8C06002119B7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E01EA27B1BEA8C06002119B7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E01EA27E1BEA8C06002119B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E01EA2811BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TasteSwipeObjectiveCMantle.xcdatamodel; sourceTree = "<group>"; };
 		E01EA2831BEA8C06002119B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +106,14 @@
 		E07F8F4D1BED0CB000E2E1E4 /* ToTryListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToTryListTableViewCell.m; sourceTree = "<group>"; };
 		E07F8F4F1BED0CD400E2E1E4 /* ToTryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToTryListViewController.h; sourceTree = "<group>"; };
 		E07F8F501BED0CD400E2E1E4 /* ToTryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToTryListViewController.m; sourceTree = "<group>"; };
+		E0E286331BF0F746002A9C0C /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		E0E286341BF0F746002A9C0C /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		E0E286361BF0F7CF002A9C0C /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		E0E286371BF0F7CF002A9C0C /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		E0E2863C1BF10537002A9C0C /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		E0E2863D1BF10537002A9C0C /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		E0E2863F1BF1075A002A9C0C /* AppSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettingsViewController.h; sourceTree = "<group>"; };
+		E0E286401BF1075A002A9C0C /* AppSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSettingsViewController.m; sourceTree = "<group>"; };
 		EA664A421B80E6424FB40E97 /* Pods-TasteSwipeObjectiveCMantle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TasteSwipeObjectiveCMantle.release.xcconfig"; path = "Pods/Target Support Files/Pods-TasteSwipeObjectiveCMantle/Pods-TasteSwipeObjectiveCMantle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,29 +182,13 @@
 				E01EA2771BEA8C06002119B7 /* AppDelegate.h */,
 				E01EA2781BEA8C06002119B7 /* AppDelegate.m */,
 				E01EA27D1BEA8C06002119B7 /* Main.storyboard */,
-				E01EA27A1BEA8C06002119B7 /* ViewController.h */,
-				E01EA27B1BEA8C06002119B7 /* ViewController.m */,
-				E01EA2B01BEA9675002119B7 /* SwipeViewController.h */,
-				E01EA2B11BEA9675002119B7 /* SwipeViewController.m */,
-				E01EA2BA1BEA9AF2002119B7 /* SwipedCardBackgroundView.h */,
-				E01EA2BB1BEA9AF2002119B7 /* SwipedCardBackgroundView.m */,
-				E01EA2B31BEA96C1002119B7 /* SwipedCardView.h */,
-				E01EA2B41BEA96C1002119B7 /* SwipedCardView.m */,
-				B034EDB71BEBFD2600E8571D /* MealDetailViewController.h */,
-				B034EDB81BEBFD2600E8571D /* MealDetailViewController.m */,
-				B034EDBA1BEC01FE00E8571D /* RecipeViewController.h */,
-				B034EDBB1BEC01FE00E8571D /* RecipeViewController.m */,
-				B034EDBD1BEC04F400E8571D /* GroceryShoppingViewController.h */,
-				B034EDBE1BEC04F400E8571D /* GroceryShoppingViewController.m */,
-				E07F8F4F1BED0CD400E2E1E4 /* ToTryListViewController.h */,
-				E07F8F501BED0CD400E2E1E4 /* ToTryListViewController.m */,
-				E01EA2C01BEAA32B002119B7 /* OverlayView.h */,
-				E01EA2C11BEAA32B002119B7 /* OverlayView.m */,
+				E01EA2C61BEAC803002119B7 /* ModelClasses */,
+				E0E286311BF0F5F4002A9C0C /* Views */,
+				E0E286301BF0F593002A9C0C /* Controllers */,
 				E01EA2831BEA8C06002119B7 /* Assets.xcassets */,
 				E01EA2851BEA8C06002119B7 /* LaunchScreen.storyboard */,
 				E01EA2881BEA8C06002119B7 /* Info.plist */,
 				E01EA2801BEA8C06002119B7 /* TasteSwipeObjectiveCMantle.xcdatamodeld */,
-				E01EA2C61BEAC803002119B7 /* CustomClasses */,
 				E01EA2741BEA8C06002119B7 /* Supporting Files */,
 			);
 			path = TasteSwipeObjectiveCMantle;
@@ -227,15 +220,10 @@
 			path = TasteSwipeObjectiveCMantleUITests;
 			sourceTree = "<group>";
 		};
-		E01EA2C61BEAC803002119B7 /* CustomClasses */ = {
+		E01EA2C61BEAC803002119B7 /* ModelClasses */ = {
 			isa = PBXGroup;
 			children = (
-				E07F8F4C1BED0CB000E2E1E4 /* ToTryListTableViewCell.h */,
-				E07F8F4D1BED0CB000E2E1E4 /* ToTryListTableViewCell.m */,
-				E01EA2D31BEACE86002119B7 /* UserModel.h */,
-				E01EA2D41BEACE86002119B7 /* UserModel.m */,
-				E01EA2D61BEACE98002119B7 /* MealModel.h */,
-				E01EA2D71BEACE98002119B7 /* MealModel.m */,
+				E0E286321BF0F6D3002A9C0C /* MantleModels */,
 				E01EA3211BEBBA2B002119B7 /* Meal.h */,
 				E01EA3221BEBBA2B002119B7 /* Meal.m */,
 				E01EA3241BEBBA39002119B7 /* User.h */,
@@ -245,7 +233,58 @@
 				B034EDE61BEC326D00E8571D /* Grocery.h */,
 				B034EDE71BEC326D00E8571D /* Grocery.m */,
 			);
-			name = CustomClasses;
+			name = ModelClasses;
+			sourceTree = "<group>";
+		};
+		E0E286301BF0F593002A9C0C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E01EA2B01BEA9675002119B7 /* SwipeViewController.h */,
+				E01EA2B11BEA9675002119B7 /* SwipeViewController.m */,
+				B034EDB71BEBFD2600E8571D /* MealDetailViewController.h */,
+				B034EDB81BEBFD2600E8571D /* MealDetailViewController.m */,
+				B034EDBA1BEC01FE00E8571D /* RecipeViewController.h */,
+				B034EDBB1BEC01FE00E8571D /* RecipeViewController.m */,
+				B034EDBD1BEC04F400E8571D /* GroceryShoppingViewController.h */,
+				B034EDBE1BEC04F400E8571D /* GroceryShoppingViewController.m */,
+				E07F8F4F1BED0CD400E2E1E4 /* ToTryListViewController.h */,
+				E07F8F501BED0CD400E2E1E4 /* ToTryListViewController.m */,
+				E0E286331BF0F746002A9C0C /* WelcomeViewController.h */,
+				E0E286341BF0F746002A9C0C /* WelcomeViewController.m */,
+				E0E286361BF0F7CF002A9C0C /* SignUpViewController.h */,
+				E0E286371BF0F7CF002A9C0C /* SignUpViewController.m */,
+				E0E2863C1BF10537002A9C0C /* SettingsViewController.h */,
+				E0E2863D1BF10537002A9C0C /* SettingsViewController.m */,
+				E0E2863F1BF1075A002A9C0C /* AppSettingsViewController.h */,
+				E0E286401BF1075A002A9C0C /* AppSettingsViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E0E286311BF0F5F4002A9C0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E07F8F4C1BED0CB000E2E1E4 /* ToTryListTableViewCell.h */,
+				E07F8F4D1BED0CB000E2E1E4 /* ToTryListTableViewCell.m */,
+				E01EA2BA1BEA9AF2002119B7 /* SwipedCardBackgroundView.h */,
+				E01EA2BB1BEA9AF2002119B7 /* SwipedCardBackgroundView.m */,
+				E01EA2B31BEA96C1002119B7 /* SwipedCardView.h */,
+				E01EA2B41BEA96C1002119B7 /* SwipedCardView.m */,
+				E01EA2C01BEAA32B002119B7 /* OverlayView.h */,
+				E01EA2C11BEAA32B002119B7 /* OverlayView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E0E286321BF0F6D3002A9C0C /* MantleModels */ = {
+			isa = PBXGroup;
+			children = (
+				E01EA2D31BEACE86002119B7 /* UserModel.h */,
+				E01EA2D41BEACE86002119B7 /* UserModel.m */,
+				E01EA2D61BEACE98002119B7 /* MealModel.h */,
+				E01EA2D71BEACE98002119B7 /* MealModel.m */,
+			);
+			name = MantleModels;
 			sourceTree = "<group>";
 		};
 		E37902DCB3869D920F2D01C5 /* Frameworks */ = {
@@ -444,10 +483,12 @@
 			files = (
 				E01EA2B51BEA96C1002119B7 /* SwipedCardView.m in Sources */,
 				E01EA3231BEBBA2B002119B7 /* Meal.m in Sources */,
-				E01EA27C1BEA8C06002119B7 /* ViewController.m in Sources */,
 				E01EA2791BEA8C06002119B7 /* AppDelegate.m in Sources */,
 				B034EDB91BEBFD2600E8571D /* MealDetailViewController.m in Sources */,
+				E0E286351BF0F746002A9C0C /* WelcomeViewController.m in Sources */,
 				E01EA2BC1BEA9AF2002119B7 /* SwipedCardBackgroundView.m in Sources */,
+				E0E2863E1BF10537002A9C0C /* SettingsViewController.m in Sources */,
+				E0E286381BF0F7CF002A9C0C /* SignUpViewController.m in Sources */,
 				E01EA2761BEA8C06002119B7 /* main.m in Sources */,
 				E07F8F511BED0CD400E2E1E4 /* ToTryListViewController.m in Sources */,
 				E01EA2C21BEAA32B002119B7 /* OverlayView.m in Sources */,
@@ -461,6 +502,7 @@
 				E01EA3291BEBBA52002119B7 /* Consumable.m in Sources */,
 				E01EA2D51BEACE86002119B7 /* UserModel.m in Sources */,
 				B034EDBC1BEC01FE00E8571D /* RecipeViewController.m in Sources */,
+				E0E286411BF1075A002A9C0C /* AppSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

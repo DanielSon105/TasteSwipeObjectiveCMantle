@@ -10,7 +10,6 @@
 #import "Meal.h"
 
 @interface SwipeViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *resetButton;
 @property NSDictionary *getMealDictionaryJSON;
 @property NSMutableArray *arrayOfMeals;
 @property NSString *identification;

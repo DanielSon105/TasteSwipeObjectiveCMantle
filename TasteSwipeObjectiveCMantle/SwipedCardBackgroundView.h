@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SwipedCardView.h"
+#import "User.h"
 
 @interface SwipedCardBackgroundView : UIView <SwipedCardViewDelegate>
 
@@ -16,9 +17,10 @@
 -(void)cardSwipedRight:(UIView *)card;
 
 -(void)changeMeMethod;
--(void)getMealInfo;
+-(void)getMealInfo:(NSString *)token;
 
 @property (retain,nonatomic)NSArray* exampleCardLabels; //%%% the labels the cards
 @property (retain,nonatomic)NSMutableArray* allCards; //%%% the labels the cards
+@property User *user;
 
 @end
