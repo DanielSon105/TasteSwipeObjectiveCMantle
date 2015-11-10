@@ -132,9 +132,10 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqual: @"SignInSegue"]) {
         UINavigationController *mainNavigationController = segue.destinationViewController;
-        SwipeViewController *slvc = [mainNavigationController.childViewControllers objectAtIndex:0];
+        SwipeViewController *swc = [mainNavigationController.childViewControllers objectAtIndex:0];
+        NSLog(@"%@", mainNavigationController.childViewControllers);
         
-        slvc.user.token = self.user.token;
+        swc.user = self.user;
     }
     
     

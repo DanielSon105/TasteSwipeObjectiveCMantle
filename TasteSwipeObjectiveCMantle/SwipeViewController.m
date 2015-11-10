@@ -21,11 +21,12 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
+    NSLog(@"svc viewdidload token --> %@", self.user.token);
 
     SwipedCardBackgroundView *swipedCardBackground = [[SwipedCardBackgroundView alloc]initWithFrame:self.view.frame];
-    [swipedCardBackground changeMeMethod];
+    [swipedCardBackground getMealInfo:self.user.token];
     [self.view addSubview:swipedCardBackground];
-    // Do any additional setup after loading the view.
+
 }
 
 - (IBAction)onResetButtonTapped:(id)sender {

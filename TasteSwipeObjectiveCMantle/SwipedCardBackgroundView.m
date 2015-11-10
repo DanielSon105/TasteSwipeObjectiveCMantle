@@ -60,8 +60,6 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 
     //Load Meals
 
-
-    [self getMealInfo:self.user.token];
     NSLog(@"get Meal Info Token --> %@", self.user.token);
 //    exampleCardLabels = [[NSArray alloc]initWithObjects:@"meal1",@"meal2",@"meal3", nil]; //%%% placeholder for card-specific information ..... instead of these placeholders, use cards....
 //    //randomlyOrAlgorithmicallyLoadedMeal
@@ -84,18 +82,16 @@ static const float CARD_WIDTH = 290; // width of the draggable card
     NSURLSession *session =
     [NSURLSession sessionWithConfiguration:sessionConfig delegate:nil delegateQueue:nil];
 
-
     NSURL *url = [NSURL URLWithString:@"http://tasteswipe-int.herokuapp.com/random_meals"];
 
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
 
     [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Accept"];
-
     [request setValue:[NSString stringWithFormat:@"Token token=\"%@\"; charset=utf-8", token] forHTTPHeaderField:@"Authorization"];
 
 
-    NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 
         if (error != nil) {
             NSLog(@"---> ERROR :: %@", error);
