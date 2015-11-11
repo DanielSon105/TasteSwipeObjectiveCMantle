@@ -56,19 +56,6 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 
 #pragma mark - Change Me Method
 
--(void)changeMeMethod{  //NEED to populate exampleCardLabels
-
-    //Load Meals
-
-    NSLog(@"get Meal Info Token --> %@", self.user.token);
-//    exampleCardLabels = [[NSArray alloc]initWithObjects:@"meal1",@"meal2",@"meal3", nil]; //%%% placeholder for card-specific information ..... instead of these placeholders, use cards....
-//    //randomlyOrAlgorithmicallyLoadedMeal
-//    loadedCards = [[NSMutableArray alloc] init];
-//    allCards = [[NSMutableArray alloc] init];
-//    cardsLoadedIndex = 0;
-//    [self loadCards];
-}
-
 -(void)loadMeals{
     
 }
@@ -99,24 +86,50 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 
         dispatch_async(dispatch_get_main_queue(), ^{
 
+            self.user.token = token; //THIS IS JUST HERE UNTIL I FIND A BETTER WAY TO GO ABOUT MANAGING THE TOKEN STUFF.
+
             getMealDictionaryJSON = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
             arrayOfMealDictionaries = [getMealDictionaryJSON objectForKey:@"meals"];
             arrayOfMeals = [NSMutableArray new];
-            NSLog(@"getMealDictionaryJSON %@", getMealDictionaryJSON);
-
             for (NSDictionary *dict in arrayOfMealDictionaries) {
                 Meal *meal = [[Meal alloc] initMealWithContentsOfDictionary:dict];
                 [arrayOfMeals addObject:meal];
-//                NSArray *array = [mutableArray copy];
-//                    NSLog(@"%@", meal.mealName);
             }
-            NSLog(@"Array of Meals %@", arrayOfMeals);
-            exampleCardLabels = [arrayOfMeals copy];
+
+            //What is the relationship between "all cards" and exampleCardLabels?
+            //What is the relationship between "loadedCard" and exampleCardLabels?
+
+            //Here's my attempt to switch arrayOfMeals over from ecl to allCards
+            self.arrayOfExampleMeals = [NSMutableArray new];
+            Meal *meal1 = [arrayOfMeals objectAtIndex:0];
+            Meal *meal2 = [arrayOfMeals objectAtIndex:1];
+            Meal *meal3 = [arrayOfMeals objectAtIndex:2];
+            [self.arrayOfExampleMeals addObject:meal1];
+            [self.arrayOfExampleMeals addObject:meal2];
+            [self.arrayOfExampleMeals addObject:meal3];
+
+            NSLog(@"@%", meal1.mealName);
+
+//            for (Meal *meal in arrayOfExampleMeals) {
+//                SwipedCardView *card = [SwipedCardView new];
+//                card.meal = meal;
+//            } //DO THIS IN createSwipeCardViewWithDataAtIndex
+
+
+//            exampleCardLabels = [arrayOfExampleMeals copy]; // instead of setting this to an array of meals, call a method that spits out an array of cards ....
+            exampleCardLabels = [[NSMutableArray alloc]init];
+
             loadedCards = [[NSMutableArray alloc] init];
-//            allCards = [arrayOfMeals copy];
-            allCards = [[NSMutableArray alloc] init];  //Need an Array of Swiped Card Views With a Meal Property Not an Array of Meals
+            //            allCards = [arrayOfMeals copy];
+            allCards = [arrayOfMeals copy];
+
+
+//            exampleCardLabels = [arrayOfMeals copy];
+//            loadedCards = [[NSMutableArray alloc] init];
+////            allCards = [arrayOfMeals copy];
+//            allCards = [[NSMutableArray alloc] init];  //Need an Array of Swiped Card Views With a Meal Property Not an Array of Meals
             cardsLoadedIndex = 0;
-            [self loadCards];
+            [self loadCards]; //NEEDS TO TAKE IN A PROPERTY OF THE EXAMPLE MEALS
         });
     }];
     
@@ -124,7 +137,7 @@ static const float CARD_WIDTH = 290; // width of the draggable card
     
 }
 
--(void)postMealToToTryArray:(id)identification{
+-(void)postMealToToTryArray:(id)identification toUserWithToken:(NSString *)token{
     // Create the request.
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:nil delegateQueue:nil];
@@ -141,6 +154,8 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",base_url,base_postRequest]];
 
+    NSLog(@"%@", url);
+
 //    [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",base_url]];
 
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -153,6 +168,7 @@ static const float CARD_WIDTH = 290; // width of the draggable card
     // This is how we set header fields
     [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Accept"];
+    [request setValue:[NSString stringWithFormat:@"Token token=\"%@\"; charset=utf-8", token] forHTTPHeaderField:@"Authorization"];
 
 
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -163,22 +179,11 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 }
 
 
-
-
-
-
-
-
-
 #pragma mark - Extra Button Setup
 
 -(void)setupView
 {
     self.backgroundColor = [UIColor colorWithRed:.92 green:.93 blue:.95 alpha:1]; //the gray background colors
-    menuButton = [[UIButton alloc]initWithFrame:CGRectMake(17, 34, 22, 15)];
-    [menuButton setImage:[UIImage imageNamed:@"menuButton"] forState:UIControlStateNormal];
-    messageButton = [[UIButton alloc]initWithFrame:CGRectMake(284, 34, 18, 18)];
-    [messageButton setImage:[UIImage imageNamed:@"messageButton"] forState:UIControlStateNormal];
     xButton = [[UIButton alloc]initWithFrame:CGRectMake(60, 485, 59, 59)];
     [xButton setImage:[UIImage imageNamed:@"xButton"] forState:UIControlStateNormal];
     [xButton addTarget:self action:@selector(swipeLeft) forControlEvents:UIControlEventTouchUpInside];
@@ -201,14 +206,20 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 
 -(SwipedCardView *)createSwipedCardViewWithDataAtIndex:(NSInteger)index
 {
-    SwipedCardView *swipedCardView = [[SwipedCardView alloc]initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)];
+    SwipedCardView *swipedCardView = [[SwipedCardView alloc]initWithFrame:CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)]; //Take in a Meal as a vairable
 
-    Meal *swipedMeal = [exampleCardLabels objectAtIndex:index];
-    swipedCardView.information.text = swipedMeal.mealName;
-    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: swipedMeal.mealImageURL]];
-    swipedCardView.mealPicture.image = [UIImage imageWithData: imageData];
+//    Meal *swipedMeal = [[exampleCardLabels objectAtIndex:index] meal]; //shoot me now!
+//    swipedCardView.meal = [[]]
+//    Meal *swipedMeal = [[allCards objectAtIndex:index] meal];
+//    Meal *swipedMeal = [allCards objectAtIndex:index];
 
-    NSLog(swipedMeal.mealImageURL);
+//    swipedCardView.meal = arrayOfExampleMeals[index];
+
+//    swipedCardView.information.text = swipedMeal.mealName;
+//    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: swipedMeal.mealImageURL]];
+//    swipedCardView.mealPicture.image = [UIImage imageWithData: imageData];
+
+//    NSLog(swipedMeal.mealImageURL);
 
 //    swipedCardView.information.text = [exampleCardLabels objectAtIndex:index];
     swipedCardView.delegate = self;
@@ -222,15 +233,36 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 
 -(void)loadCards
 {
-    if([exampleCardLabels count] > 0) {
+    if([self.arrayOfExampleMeals count] > 0) { //changed from exampleCardLabels
+
+        //
         NSInteger numLoadedCardsCap =(([exampleCardLabels count] > MAX_BUFFER_SIZE)?MAX_BUFFER_SIZE:[exampleCardLabels count]);
         //%%% if the buffer size is greater than the data size, there will be an array error, so this makes sure that doesn't happen
 
         //%%% loops through the exampleCardsLabels array to create a card for each label.  This should be customized by removing "exampleCardLabels" with your own array of data
 
-        for (int i = 0; i<[exampleCardLabels count]; i++) {
-            SwipedCardView* newCard = [self createSwipedCardViewWithDataAtIndex:i]; //SwipedCardView
-            [allCards addObject:newCard];
+
+//        for (int i = 0; i<[exampleCardLabels count]; i++) {
+//            SwipedCardView* newCard = [self createSwipedCardViewWithDataAtIndex:i];
+        for (int i = 0; i<[self.arrayOfExampleMeals count]; i++) {
+                SwipedCardView* newCard = [self createSwipedCardViewWithDataAtIndex:i];
+            newCard.meal = self.arrayOfExampleMeals[i];
+            NSLog(@"%@", self.arrayOfExampleMeals);
+            newCard.information.text = newCard.meal.mealName;
+            NSData *imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: newCard.meal.mealImageURL]];
+            newCard.mealPicture.image = [UIImage imageWithData: imageData];
+            NSLog(@"%lu", exampleCardLabels.count);
+            NSLog(@"text --> %@", newCard.information.text);
+
+            [exampleCardLabels addObject:newCard];
+
+
+
+
+            //SwipedCardView
+//            [allCards addObject:newCard]; -- is this needed?
+
+//            newCard.meal = [arrayOfMeals objectAtIndex:i];  I THINK THIS NEEDS TO BE LOADED IN THE CREATESWIPCARDVIEWWITH DATAATINDEX METHOD
 
             if (i<numLoadedCardsCap) {
                 //%%% adds a small number of cards to be loaded
@@ -247,9 +279,11 @@ static const float CARD_WIDTH = 290; // width of the draggable card
                 [self addSubview:[loadedCards objectAtIndex:i]];
             }
             cardsLoadedIndex++; //%%% we loaded a card into loaded cards, so we have to increment
+
         }
     }
 }
+
 
 #warning include own action here!
 //%%% action called when the card goes to the left.
@@ -279,7 +313,7 @@ static const float CARD_WIDTH = 290; // width of the draggable card
 
     //NEED A METHOD THAT INCREASES THE OBJECT AT INDEX BY ONE FOR EVERY SUBSEQUENT SWIPE ----OR----- probably better solution.... base the meal on the Swiped View
 
-    [self postMealToToTryArray:[[exampleCardLabels objectAtIndex:0] mealID]];
+    [self postMealToToTryArray:[[exampleCardLabels objectAtIndex:0] mealID] toUserWithToken:self.user.token]; //instead of exampleCardLabels objectAtIndex:0, the logic should be tied to the meal that was instantiated with the card...... NEED TO DO THIS NOW.  ALSO THE WAY TOKEN IS BEING HANDLED HERE IS PROBABLY PLACEHOLDER-ESQUE TOO
 
     NSLog(@"loadedCard mealName is --> %@",[[exampleCardLabels objectAtIndex:0] mealName]);
 

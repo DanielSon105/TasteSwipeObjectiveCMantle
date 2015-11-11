@@ -24,6 +24,9 @@
 @property (nonatomic, strong)UIPanGestureRecognizer *panGestureRecognizer;
 @property (nonatomic)CGPoint originalPoint;
 @property (nonatomic,strong)SwipedCardView* swipedCardView;
+
+
+//MEAL SPECIFIC PROPERTIES
 @property (nonatomic,strong)UILabel* information; //%%% a placeholder for any card-specific information
 
 @property (nonatomic,strong)UIImageView *mealPicture; //this should probably replace the information placeholder above

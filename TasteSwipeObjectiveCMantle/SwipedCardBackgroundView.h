@@ -19,7 +19,8 @@
 -(void)changeMeMethod;
 -(void)getMealInfo:(NSString *)token;
 
-@property (retain,nonatomic)NSArray* exampleCardLabels; //%%% the labels the cards
+@property (retain,nonatomic)NSMutableArray* arrayOfExampleMeals;
+@property (retain,nonatomic)NSMutableArray* exampleCardLabels; //%%% the labels the cards
 @property (retain,nonatomic)NSMutableArray* allCards; //%%% the labels the cards
 @property User *user;
 

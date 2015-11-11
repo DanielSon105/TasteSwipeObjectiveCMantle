@@ -30,7 +30,7 @@
 
 @synthesize panGestureRecognizer;
 @synthesize information;
-@synthesize mealPicture;
+@synthesize mealPicture; //im sure i added this
 @synthesize overlayView;
 
 - (id)initWithFrame:(CGRect)frame
@@ -42,11 +42,41 @@
 #warning placeholder stuff, replace with card-specific information {
         information = [[UILabel alloc]initWithFrame:CGRectMake(self.frame.size.width * .05 , self.frame.size.width * .05, self.frame.size.width * .9, self.frame.size.width * .9)]; //originally (0, 50, self.frame.size.width, 100)];
 
-        mealPicture = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width *.05, self.frame.size.width * .05, self.frame.size.width * .9, self.frame.size.width * .9)];
-        mealPicture.backgroundColor = [UIColor redColor];
-        mealPicture.layer.cornerRadius = 4;
-        mealPicture.clipsToBounds = YES;
+        mealPicture = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width * .05 , self.frame.size.width * .05, self.frame.size.width * .9, self.frame.size.width * .9)];
+//        mealPicture.backgroundColor = [UIColor redColor];
+//        mealPicture.layer.cornerRadius = 4;
+//        mealPicture.clipsToBounds = YES;
+
+        CGFloat
+        x      = information.center.x,
+        y      = information.center.y;
+//        width  = self.frame.size.width * .05,
+//        height = self.frame.size.width * .05;
+
+        CGPoint point = {x, y};
+//        CGSize  size  = {width, height};
+
+//        CGRect  rect1 = {1, 3, size};
+//        CGRect  rect2 = {point, size};
+//        CGRect  rect3 = {point, size.width, size.height};
+//
+//        //using designated (named) initialisers
+//        CGRect  rect4 = {.origin.x=3, .origin.y=5, .size = {100,100}};
+//
+//        //with designated initialisers, order doesn't matter
+//        CGRect  rect5 = {.size=size, .origin.x=3, .origin.y=5};
+//
+//        NSLog (@"rect1 %@",NSStringFromCGRect(rect1));
+//        NSLog (@"rect2 %@",NSStringFromCGRect(rect2));
+//        NSLog (@"rect3 %@",NSStringFromCGRect(rect3));
+//        NSLog (@"rect4 %@",NSStringFromCGRect(rect4));
+//        NSLog (@"rect5 %@",NSStringFromCGRect(rect5));
+
+
+
+        mealPicture.center = point;
         [information addSubview:mealPicture];
+
 
         information.text = @"no info given";
         [information setTextAlignment:NSTextAlignmentCenter];
